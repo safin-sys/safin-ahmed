@@ -21,10 +21,12 @@ img.logo {
     width: 60px;
 }
 
-label.menuBtn {
+label.menuBtn > a {
     font-weight: 700;
     font-size: 24px;
     line-height: 60px;
+    text-decoration: none;
+    color: black;
 }
 
 /* Header End */
@@ -50,8 +52,81 @@ p.subTitle {
 
 /* Projects */
 
-video {
+main {
+    padding-bottom: 2.5rem;
+}
+
+section.frame > video {
     width: 100%;
 }
 
+section.projectTitle > h1 {
+    width: 90.33%;
+    margin: 30px auto 0 auto;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+section.projectTitle > p {
+    width: 90.33%;
+    margin: 10px auto 0 auto;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+section.seeMoreBtn {
+    width: 90.33%;
+    margin: 30px auto auto auto;
+}
+
+section.seeMoreBtn > div {
+    display: flex;
+    width: 190px;
+    height: 60px;
+    background: black;
+}
+
+section.seeMoreBtn > div > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    align-self: center;
+    justify-content: first baseline;
+    margin-left: 10px;
+}
+
+section.seeMoreBtn > div > img {
+    justify-self: last baseline;
+    margin: 20px auto auto 10px;
+}
+
 /* Projects End */
+
+/* Footer */
+
+footer {
+    width: 90.33%;
+    display: flex;
+    justify-content: space-between;
+    margin: 75px auto auto auto;
+}
+
+footer > section.footerText {
+    font-weight: normal;
+    font-size: 18px;
+    width: 190px;
+}
+
+footer > section.social {
+    width: 148px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > section.social > a > img {
+    width: 36px;
+    height: 36px;
+}
+
+/* Footer End */
