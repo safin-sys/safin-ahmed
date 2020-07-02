@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="assets/bl.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,40 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img class="logo" src="assets/logo.png"></a>
-        <label class="menuBtn"><a href="#">Menu</a></label>
+        <nav class="phone">
+            <div class="menu_container">
+                <div class="phone_nav">
+                    <a href="index.html"><img class="logo" src="assets/wl.png"></a>
+                    <label class="menuBtn2"><a href="#" onclick="toggleNav2()">Close</a></label>
+                </div>
+    
+                <div class="nav_links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phone_footer">
+                <label for="dark" onclick="comingSoon()">
+                    <a href="#">Dark Mode</a>
+                </label>
+    
+                <section class="social">
+                    <a href="https://www.instagram.com/safinthegreat" class="insta"><img src="assets/social/whiteinst.png" alt="insta"></a>
+                    <a href="https://twitter.com/SafinTheShip" class="twit"><img src="assets/social/whitetwit.png" alt="twit"></a>
+                    <a href="https://github.com/safin-sys" class="fb"><img src="assets/social/whitegithub.png" alt="github"></a>
+                </section>                
+            </div>
+        </nav>
+
+        <nav class="pc">
+            <a href="index.html"><img class="logo" src="assets/bl.png"></a>
+            <label class="menuBtn"><a href="#" onclick="toggleNav()">Menu</a></label>
+        </nav>
     </header>
 
     <main>
@@ -34,19 +67,22 @@
                     <img src="assets/Arrow.svg" alt="Arrow">
                 </div>
             </section>
+            <div class="push"></div>
         </div>
-
-        <footer>
-            <section class="footerText">
-                <p>All rights reseverd to Safin Ahmed.</p>
-            </section>
-
-            <section class="social">
-                <a href="https://www.instagram.com/safinthegreat" class="insta"><img src="assets/social/insta.png" alt="insta"></a>
-                <a href="https://twitter.com/SafinTheShip" class="twit"><img src="assets/social/twitter.png" alt="twit"></a>
-                <a href="https://fb.me/SafinTheShip" class="fb"><img src="assets/social/facebook.png" alt="fb"></a>
-            </section>
-        </footer>
     </main>
+
+    <footer>
+        <section class="footerText">
+            <p>All rights reseverd to Safin Ahmed.</p>
+        </section>
+
+        <section class="social">
+            <a href="https://www.instagram.com/safinthegreat" class="insta"><img src="assets/social/inst.png" alt="insta"></a>
+            <a href="https://twitter.com/SafinTheShip" class="twit"><img src="assets/social/twit.png" alt="twit"></a>
+            <a href="https://github.com/safin-sys" class="fb"><img src="assets/social/github.png" alt="github"></a>
+        </section>
+    </footer>
+
 </body>
+<script src="main.js"></script>
 </html>

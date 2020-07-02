@@ -7,14 +7,19 @@
     font-family: "Montserrat";
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Header */
 
-header {
+nav.pc {
     display: flex;
     justify-content: space-between;
     width: 90.33%;
-    margin: 20px auto;
-    
+    margin: 20px auto;    
 }
 
 img.logo {
@@ -23,10 +28,54 @@ img.logo {
 
 label.menuBtn > a {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 60px;
     text-decoration: none;
     color: black;
+}
+
+nav.phone{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background: black;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+nav.phone > div.menu_container > div.phone_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90.33%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+label.menuBtn2 > a {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+nav.phone > div.menu_container > div.nav_links > ul {
+    min-height: 100%;
+    width: 90.33%;
+    margin: 70px auto;
+}
+
+nav.phone > div.menu_container > div.nav_links > ul > li {
+    margin: 10px auto;
+}
+
+nav.phone > div.menu_container > div.nav_links > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 /* Header End */
@@ -35,7 +84,7 @@ label.menuBtn > a {
 
 div.title {
     width: 90.33%;
-    margin: 86px auto 40px auto;
+    margin: 40px auto 40px auto;
 }
 
 h1.title {
@@ -51,11 +100,6 @@ p.subTitle {
 /* Title End */
 
 /* Projects */
-
-main {
-    padding-bottom: 2.5rem;
-}
-
 section.frame > video {
     width: 100%;
 }
@@ -105,26 +149,37 @@ section.seeMoreBtn > div > img {
 
 /* Footer */
 
-footer {
+footer,
+div.phone_footer {
     width: 90.33%;
     display: flex;
     justify-content: space-between;
-    margin: 75px auto auto auto;
+    margin: auto auto 0 auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
-footer > section.footerText {
-    font-weight: normal;
+footer > section.footerText,
+div.phone_footer > label > a {
     font-size: 18px;
     width: 190px;
 }
 
-footer > section.social {
+div.phone_footer > label > a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+footer > section.social,
+div.phone_footer > section.social  {
     width: 148px;
     display: flex;
     justify-content: space-between;
 }
 
-footer > section.social > a > img {
+footer > section.social > a > img,
+div.phone_footer > section.social > a > img {
     width: 36px;
     height: 36px;
 }
