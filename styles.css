@@ -43,6 +43,7 @@ nav.phone{
     position: fixed;
     top: 0;
     visibility: hidden;
+    z-index: 1000000;
 }
 
 nav.phone > div.menu_container > div.phone_nav {
