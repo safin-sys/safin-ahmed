@@ -21,3 +21,7 @@ let toggleNav2 = function() {
 const comingSoon = function() {
     alert('This feature is under construction, try again later.')
 }
+
+const dunno = function() {
+    alert('I dunno this yet, added for balance 😊')
+}
