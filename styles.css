@@ -152,31 +152,6 @@ section.seeMoreBtn > div > img {
 
 /* Projects End */
 
-/* About Skills */
-
-.skills {
-    width: 90.33%;
-    margin: auto;
-}
-
-.skills > img.react {
-    width: 96.52%;
-}
-
-.skills > img.html, img.js{
-    width: 83.42%;
-}
-
-.skills > img.vue{
-    width: 57.59%;
-}
-
-.skills > img.node{
-    width: 59.35%;
-}
-
-/* About Skills End */
-
 /* Footer */
 
 footer,
@@ -208,3 +183,104 @@ div.phone_footer > section.social > a > img {
 }
 
 /* Footer End */
+
+/* About Skills */
+
+.skills {
+    width: 90.33%;
+    margin: auto;
+}
+
+.skills > img.react {
+    opacity: 10%;
+    width: 96.52%;
+}
+
+.skills > img.html, img.js{
+    width: 83.42%;
+}
+
+.skills > img.vue{
+    opacity: 10%;
+    width: 57.59%;
+}
+
+.skills > img.node{
+    opacity: 10%;
+    width: 59.35%;
+}
+
+/* About Skills End */
+
+/* Contact Main Start */
+
+div.contactTitle {
+    width: 90.33%;
+    margin: 40px auto 7px auto;
+}
+
+form,
+.emailAndPhone {
+    width: 90.33%;
+    margin: auto;
+}
+
+form>label {
+    font-size: 24px;
+}
+
+input#email,
+input#subject,
+textarea#message {
+    width: 100%;
+    border: 2px solid;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+input#submit {
+    border: none;
+    background-color: black;
+    color: white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    float: right;
+}
+
+::placeholder {
+    color: #4D4D4D;
+    opacity: 1; /* Firefox */
+    font-size: 16px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #4D4D4D;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #4D4D4D;
+  }
+
+  .emailAndPhone {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .emailAndPhone > a.email {
+        margin-top: 50px;
+    }
+    
+    .emailAndPhone > a {
+    color: black;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+  }
+
+/* Contact Main End */

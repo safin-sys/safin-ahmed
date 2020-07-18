@@ -23,5 +23,5 @@ const comingSoon = function() {
 }
 
 const dunno = function() {
-    alert('I dunno this yet, added for balance 😊')
+    alert('Still learning.')
 }
