@@ -24,6 +24,7 @@ nav.pc {
 
 img.logo {
     width: 60px;
+    cursor: none;
 }
 
 label.menuBtn > a {
@@ -284,3 +285,36 @@ input#submit {
   }
 
 /* Contact Main End */
+
+/* Projects Page */
+
+.projectsBtn {
+    width: 90.33%;
+    margin: auto;
+    display: flex;
+}
+
+section.githubBtn,
+section.demoBtn {
+    margin: 20px 10px 0 0;
+    display: flex;
+    width: 120px;
+    height: 50px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+section.githubBtn > a,
+section.demoBtn > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.projects {
+    margin-bottom: 30px;
+}
+
+/* Projects Page End */

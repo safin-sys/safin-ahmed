@@ -25,3 +25,7 @@ const comingSoon = function() {
 const dunno = function() {
     alert('Still learning.')
 }
+
+const dummy = function() {
+    alert('These are dummy projects.')
+}
