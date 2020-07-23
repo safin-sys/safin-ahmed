@@ -15,6 +15,10 @@ body {
 
 /* Header */
 
+.pc_nav_links {
+    visibility: hidden;
+}
+
 nav.pc {
     display: flex;
     justify-content: space-between;
@@ -106,6 +110,13 @@ p.subTitle {
 /* Title End */
 
 /* Projects */
+
+.projects2,
+.projects3,
+.projects4 {
+    display: none;
+}
+
 section.frame > video {
     width: 100%;
 }
@@ -121,7 +132,7 @@ section.projectTitle > p {
     width: 90.33%;
     margin: 10px auto 0 auto;
     font-weight: normal;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 section.seeMoreBtn {
@@ -318,3 +329,65 @@ section.demoBtn > a {
 }
 
 /* Projects Page End */
+
+
+/*********************
+****DESKTOP START****
+*********************/
+
+/* Header Start */
+
+@media only screen and (min-width: 769px) {
+    img.logo {
+        cursor: pointer;
+    }
+
+    .menuBtn{
+        display: none;
+    }
+
+    .pc_nav_links {
+        list-style: none;
+        visibility: visible;
+    }
+
+    .pc_nav_links > li {
+        display: inline;
+        margin-left: 50px;
+    }
+
+    .pc_nav_links > li > a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 60px;   
+    }
+
+    .pc_nav_links > li > a:hover {
+        color: #444;
+    }
+
+    .projectContainer {
+        width: 90.33%;
+        margin: auto;
+        overflow: auto;
+    }
+
+    .projects,
+    .projects2,
+    .projects3,
+    .projects4 {
+        margin: 20px 8px auto auto;
+        width: 24%;
+        display: inline-block;
+    }
+    
+    section.projectTitle > h1,
+    section.projectTitle > p,
+    section.seeMoreBtn {
+        width: 100%;
+    }
+  }
+
+/* Header End */
