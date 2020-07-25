@@ -143,7 +143,7 @@ section.seeMoreBtn {
 section.seeMoreBtn > div {
     display: flex;
     width: 160px;
-    height: 60px;
+    height: 50px;
     background: black;
 }
 
@@ -159,7 +159,7 @@ section.seeMoreBtn > div > a {
 
 section.seeMoreBtn > div > img {
     justify-self: last baseline;
-    margin: 20px auto auto 10px;
+    margin: 14px auto auto 10px;
 }
 
 /* Projects End */
@@ -369,18 +369,23 @@ section.demoBtn > a {
     }
 
     .projectContainer {
+        display: flex;
         width: 90.33%;
         margin: auto;
         overflow: auto;
+        justify-content: space-between;
     }
 
     .projects,
     .projects2,
     .projects3,
     .projects4 {
-        margin: 20px 8px auto auto;
-        width: 24%;
-        display: inline-block;
+        margin-right: 1%;
+        display: block;
+    }
+
+    .projects4 {
+        margin-right: 0; 
     }
     
     section.projectTitle > h1,
