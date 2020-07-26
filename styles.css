@@ -416,4 +416,22 @@ section.demoBtn > a {
     }
     
     /* About End */
+
+    /* Contact Start */
+
+    .contactContainer {
+        width: 90.33%;
+        margin: auto;
+        display: flex;
+    }
+
+    .emailAndPhone {
+        align-items: flex-end;
+    }
+
+    input#submit {
+        float: left;
+    }
+
+    /* Contact End */
   }
