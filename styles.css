@@ -335,9 +335,10 @@ section.demoBtn > a {
 ****DESKTOP START****
 *********************/
 
-/* Header Start */
-
 @media only screen and (min-width: 769px) {
+
+    /* Header Start */
+
     img.logo {
         cursor: pointer;
     }
@@ -393,6 +394,26 @@ section.demoBtn > a {
     section.seeMoreBtn {
         width: 100%;
     }
-  }
 
-/* Header End */
+    /* Header End */
+
+    /* About Start */
+
+    .skills > img.react {
+        width: 30%;
+    }
+    
+    .skills > img.html, img.js{
+        width: 30%;
+    }
+    
+    .skills > img.vue{
+        width: 15%;
+    }
+    
+    .skills > img.node{
+        width: 18%;
+    }
+    
+    /* About End */
+  }
