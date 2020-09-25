@@ -17,6 +17,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 main .intro {
@@ -95,15 +98,44 @@ main .intro .main-footer a span {
   margin-right: 4px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 64px;
+  background-color: #202022;
+  z-index: 3;
+  -webkit-transform: translateY(-64px);
+          transform: translateY(-64px);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-box-shadow: 0 8px 6px -6px #151515;
+          box-shadow: 0 8px 6px -6px #151515;
+}
+
+.transform {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .projects {
   color: white;
   padding: 32px;
+  padding-bottom: 0;
+  margin-top: 100vh;
+  height: 100vh;
+  position: relative;
+  background-color: black;
 }
 
 .projects h2 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 24px;
+  z-index: 4;
 }
 
 .projects .card {
@@ -153,6 +185,81 @@ main .intro .main-footer a span {
 }
 
 .projects .card a .js {
+  display: inline-block;
+  margin: 16px 8px 0 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #F1E05A;
+}
+
+.projects2 {
+  color: white;
+  padding: 32px;
+  padding-bottom: 0;
+  height: 150vh;
+  position: relative;
+  background-color: black;
+}
+
+.projects2 h2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 24px;
+  z-index: 4;
+}
+
+.projects2 .card {
+  z-index: 2;
+  margin-top: 32px;
+  background-color: #202022;
+  padding: 40px;
+}
+
+.projects2 .card a {
+  text-decoration: none;
+}
+
+.projects2 .card a h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.projects2 .card a .description {
+  margin-top: 8px;
+  font-size: 14px;
+  color: grey;
+}
+
+.projects2 .card a .language {
+  display: inline-block;
+  margin: 16px 8px 0 0;
+  color: white;
+}
+
+.projects2 .card a .html {
+  display: inline-block;
+  margin: 16px 8px 0 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #E34C26;
+}
+
+.projects2 .card a .css {
+  display: inline-block;
+  margin: 16px 8px 0 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #563D7C;
+}
+
+.projects2 .card a .js {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
