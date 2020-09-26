@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'Gothic A1';
+  src: url(/fonts/GothicA1-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothic A1';
+  src: url(/fonts/GothicA1-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gothic A1';
+  src: url(/fonts/GothicA1-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -159,7 +180,7 @@ main .intro .main-footer a span {
 .projects .card section .description {
   margin-top: 8px;
   font-size: 14px;
-  color: grey;
+  color: #949495;
 }
 
 .projects .card section .language {
@@ -196,7 +217,7 @@ main .intro .main-footer a span {
   background-color: #F1E05A;
 }
 
-.tech {
+.lang {
   color: white;
   padding: 32px;
   padding-bottom: 0;
@@ -204,7 +225,7 @@ main .intro .main-footer a span {
   background-color: black;
 }
 
-.tech h2 {
+.lang h2 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -214,7 +235,58 @@ main .intro .main-footer a span {
   z-index: 4;
 }
 
+.lang .lang-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 32px;
+}
+
+.lang .lang-container .collapsable .primary {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.lang .lang-container .collapsable .secondary::before {
+  content: '';
+  width: 2px;
+  height: 15px;
+  display: inline-block;
+  background: #404040;
+  position: absolute;
+  left: -6px;
+}
+
+.lang .lang-container .collapsable .secondary:last-child {
+  margin-bottom: 8px;
+}
+
+.lang .lang-container .collapsable .secondary {
+  font-weight: normal;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
 footer {
   height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+#sheep {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

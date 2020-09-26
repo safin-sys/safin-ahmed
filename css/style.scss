@@ -1,3 +1,22 @@
+@font-face{
+    font-family: 'Gothic A1';
+    src: url(/fonts/GothicA1-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Gothic A1';
+    src: url(/fonts/GothicA1-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Gothic A1';
+    src: url(/fonts/GothicA1-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -117,7 +136,7 @@ main {
             .description {
                 margin-top: 8px;
                 font-size: 14px;
-                color: grey;
+                color: #949495;
             }
             .language {
                 display: inline-block;
@@ -152,7 +171,7 @@ main {
         }
     }
 }
-.tech {
+.lang {
     color: white;
     padding: 32px;
     padding-bottom: 0;
@@ -166,8 +185,47 @@ main {
         top: 24px;
         z-index: 4;
     }
+    .lang-container {
+        width: fit-content;
+        padding: 32px;
+        .collapsable{
+            .primary{
+                font-size: 12px;
+                cursor: pointer;
+            }
+            .secondary::before{
+                content: '';
+                width: 2px;
+                height: 15px;
+                display: inline-block;
+                background: #404040;
+                position: absolute;
+                left: -6px;
+            }
+            .secondary:last-child{
+                margin-bottom: 8px;
+            }
+            .secondary{
+                font-weight: normal;
+                margin-left: 8px;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
-footer {
+footer{
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: white;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+#sheep {
+    display: none;
 }
