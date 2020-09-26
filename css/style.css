@@ -123,7 +123,6 @@ main .intro .main-footer a span {
   padding: 32px;
   padding-bottom: 0;
   margin-top: 100vh;
-  height: 100vh;
   position: relative;
   background-color: black;
 }
@@ -142,31 +141,34 @@ main .intro .main-footer a span {
   margin-top: 32px;
   background-color: #202022;
   padding: 40px;
+  cursor: pointer;
 }
 
-.projects .card a {
+.projects .card section {
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
-.projects .card a h1 {
+.projects .card section h1 {
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
 
-.projects .card a .description {
+.projects .card section .description {
   margin-top: 8px;
   font-size: 14px;
   color: grey;
 }
 
-.projects .card a .language {
+.projects .card section .language {
   display: inline-block;
   margin: 16px 8px 0 0;
   color: white;
 }
 
-.projects .card a .html {
+.projects .card section .HTML {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
@@ -175,7 +177,8 @@ main .intro .main-footer a span {
   background-color: #E34C26;
 }
 
-.projects .card a .css {
+.projects .card section .CSS,
+.projects .card section .SCSS {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
@@ -184,7 +187,7 @@ main .intro .main-footer a span {
   background-color: #563D7C;
 }
 
-.projects .card a .js {
+.projects .card section .JS {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
@@ -193,16 +196,15 @@ main .intro .main-footer a span {
   background-color: #F1E05A;
 }
 
-.projects2 {
+.tech {
   color: white;
   padding: 32px;
   padding-bottom: 0;
-  height: 150vh;
   position: relative;
   background-color: black;
 }
 
-.projects2 h2 {
+.tech h2 {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -212,59 +214,7 @@ main .intro .main-footer a span {
   z-index: 4;
 }
 
-.projects2 .card {
-  z-index: 2;
-  margin-top: 32px;
-  background-color: #202022;
-  padding: 40px;
-}
-
-.projects2 .card a {
-  text-decoration: none;
-}
-
-.projects2 .card a h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-}
-
-.projects2 .card a .description {
-  margin-top: 8px;
-  font-size: 14px;
-  color: grey;
-}
-
-.projects2 .card a .language {
-  display: inline-block;
-  margin: 16px 8px 0 0;
-  color: white;
-}
-
-.projects2 .card a .html {
-  display: inline-block;
-  margin: 16px 8px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #E34C26;
-}
-
-.projects2 .card a .css {
-  display: inline-block;
-  margin: 16px 8px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #563D7C;
-}
-
-.projects2 .card a .js {
-  display: inline-block;
-  margin: 16px 8px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #F1E05A;
+footer {
+  height: 64px;
 }
 /*# sourceMappingURL=style.css.map */
