@@ -195,17 +195,20 @@ main {
                 display: inline-block;
                 transform: rotate(30deg);
                 transition: all .2s ease-in-out;
+                margin-right: 2px;
             }
             .primary-rotate::before{
                 content: '\25be';
                 display: inline-block;
                 transition: all .2s ease-in-out;
+                margin-right: 2px;
             }
             .primary,
             .primary-rotate{
                 font-size: 12px;
                 cursor: pointer;
                 user-select: none;
+                -webkit-tap-highlight-color: transparent;
             }
             .secondary::before{
                 content: '';

@@ -253,6 +253,7 @@ main .intro .main-footer a span {
           transform: rotate(30deg);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  margin-right: 2px;
 }
 
 .lang .lang-container .collapsable .primary-rotate::before {
@@ -260,6 +261,7 @@ main .intro .main-footer a span {
   display: inline-block;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  margin-right: 2px;
 }
 
 .lang .lang-container .collapsable .primary,
@@ -270,6 +272,7 @@ main .intro .main-footer a span {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lang .lang-container .collapsable .secondary::before {
