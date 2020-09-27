@@ -189,9 +189,23 @@ main {
         width: fit-content;
         padding: 32px;
         .collapsable{
-            .primary{
+            margin: 8px 0;
+            .primary::before{
+                content: '\25be';
+                display: inline-block;
+                transform: rotate(30deg);
+                transition: all .2s ease-in-out;
+            }
+            .primary-rotate::before{
+                content: '\25be';
+                display: inline-block;
+                transition: all .2s ease-in-out;
+            }
+            .primary,
+            .primary-rotate{
                 font-size: 12px;
                 cursor: pointer;
+                user-select: none;
             }
             .secondary::before{
                 content: '';
@@ -206,9 +220,13 @@ main {
                 margin-bottom: 8px;
             }
             .secondary{
-                font-weight: normal;
+                display: none;
+                font-weight: 400;
                 margin-left: 8px;
                 text-transform: uppercase;
+                overflow: hidden;
+                max-height: 0px;
+                transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
         }
     }
@@ -226,6 +244,6 @@ footer{
     }
 }
 
-#sheep {
+safin {
     display: none;
 }

@@ -13,6 +13,32 @@ window.addEventListener('scroll', e=>{
     };
 });
 
+//Collapsable Language
+const collapsable = document.querySelectorAll('.collapsable');
+
+collapsable.forEach(elem=>{
+    const primary = elem.children[0];
+    const secondary = elem.children[1];
+    
+    primary.addEventListener('click', e=>{
+        for(let i = 0; i < secondary.children.length; i++) {
+            secondary.children[i].classList.toggle('active');
+            e.target.classList.toggle('primary-rotate');
+            e.target.classList.toggle('primary');
+
+            if(secondary.children[i].classList.contains('active')){
+                secondary.children[i].style.display = 'block';
+                secondary.children[i].style.overflow = 'visible';
+                secondary.children[i].style.maxHeight = secondary.scrollHeight +'px';
+            } else {
+                secondary.children[i].style.overflow = 'hidden';
+                secondary.children[i].style.maxHeight = '0px';
+                setTimeout(()=>{secondary.children[i].style.display = 'none';}, 400);
+            };
+        };
+    });
+});
+
 //Github API
 const hiddenRepos = ['firstwebsite', 'safin-ahmed'];
 fetch('https://api.github.com/users/safin-sys/repos')

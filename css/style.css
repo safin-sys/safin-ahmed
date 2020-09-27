@@ -242,9 +242,34 @@ main .intro .main-footer a span {
   padding: 32px;
 }
 
-.lang .lang-container .collapsable .primary {
+.lang .lang-container .collapsable {
+  margin: 8px 0;
+}
+
+.lang .lang-container .collapsable .primary::before {
+  content: '\25be';
+  display: inline-block;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.lang .lang-container .collapsable .primary-rotate::before {
+  content: '\25be';
+  display: inline-block;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.lang .lang-container .collapsable .primary,
+.lang .lang-container .collapsable .primary-rotate {
   font-size: 12px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .lang .lang-container .collapsable .secondary::before {
@@ -262,9 +287,14 @@ main .intro .main-footer a span {
 }
 
 .lang .lang-container .collapsable .secondary {
-  font-weight: normal;
+  display: none;
+  font-weight: 400;
   margin-left: 8px;
   text-transform: uppercase;
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 footer {
@@ -286,7 +316,7 @@ footer p {
   font-size: 12px;
 }
 
-#sheep {
+safin {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
