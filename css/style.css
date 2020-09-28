@@ -158,38 +158,38 @@ main .intro .main-footer a span {
   z-index: 4;
 }
 
-.projects .card {
+.projects .cards-container .card {
   margin-top: 32px;
   background-color: #202022;
   padding: 40px;
   cursor: pointer;
 }
 
-.projects .card section {
+.projects .cards-container .card section {
   text-decoration: none;
   width: 100%;
   height: 100%;
 }
 
-.projects .card section h1 {
+.projects .cards-container .card section h1 {
   font-size: 24px;
   font-weight: 600;
   color: white;
 }
 
-.projects .card section .description {
+.projects .cards-container .card section .description {
   margin-top: 8px;
   font-size: 14px;
   color: #949495;
 }
 
-.projects .card section .language {
+.projects .cards-container .card section .language {
   display: inline-block;
   margin: 16px 8px 0 0;
   color: white;
 }
 
-.projects .card section .HTML {
+.projects .cards-container .card section .HTML {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
@@ -198,8 +198,8 @@ main .intro .main-footer a span {
   background-color: #E34C26;
 }
 
-.projects .card section .CSS,
-.projects .card section .SCSS {
+.projects .cards-container .card section .CSS,
+.projects .cards-container .card section .SCSS {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
@@ -208,13 +208,59 @@ main .intro .main-footer a span {
   background-color: #563D7C;
 }
 
-.projects .card section .JS {
+.projects .cards-container .card section .JS {
   display: inline-block;
   margin: 16px 8px 0 0;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: #F1E05A;
+}
+
+.projects .cards-info-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: 150vh;
+  overflow-y: scroll;
+  background-color: black;
+}
+
+.projects .cards-info-container button {
+  position: absolute;
+  z-index: 6;
+  height: 40px;
+  width: 40px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 14px auto auto 8px;
+}
+
+.projects .cards-info-container .img-container {
+  height: 232px;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.projects .cards-info-container .img-container img {
+  width: 100%;
+  min-height: 232px;
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .lang {
