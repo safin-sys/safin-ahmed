@@ -217,22 +217,22 @@ main .intro .main-footer a span {
   background-color: #F1E05A;
 }
 
-.projects .cards-info-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
+.cards-info-container {
+  width: 100vw;
+  height: 100vh;
   max-height: 150vh;
   overflow-y: scroll;
   background-color: black;
 }
 
-.projects .cards-info-container button {
+.cards-info-container .card-info-nav {
+  top: 0;
+  position: fixed;
+  z-index: 7;
+}
+
+.cards-info-container .card-info-nav button {
   position: absolute;
-  z-index: 6;
   height: 40px;
   width: 40px;
   background-color: Transparent;
@@ -242,25 +242,50 @@ main .intro .main-footer a span {
   overflow: hidden;
   outline: none;
   margin: 14px auto auto 8px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
-.projects .cards-info-container .img-container {
+.cards-info-container .img-container {
+  top: 0;
   height: 232px;
+  width: 100%;
   overflow: hidden;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: fixed;
+  z-index: 5;
 }
 
-.projects .cards-info-container .img-container img {
-  width: 100%;
+.cards-info-container .img-container img {
+  min-width: 100%;
   min-height: 232px;
   position: relative;
   top: 50%;
   bottom: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.cards-info-container .card-info-body {
+  margin-top: 232px;
+  height: 150vh;
+  z-index: 6;
+  position: relative;
+  background-color: black;
+}
+
+.cards-info-container .card-info-body .card-title {
+  padding: 16px 8px;
+}
+
+.cards-info-container .card-info-body .card-title h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.cards-info-container .card-info-body .card-title h6 {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .lang {

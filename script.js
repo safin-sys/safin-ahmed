@@ -68,10 +68,15 @@ fetch('https://api.github.com/users/safin-sys/repos')
         });
         
         //Modals
+        const body = document.querySelector('body');
         const cards = document.querySelectorAll('div.card');
+
+        let cardinfoHtml = '';
         cards.forEach(card=>{
             card.addEventListener('click', e=>{
-                console.log(e.target);
-            })
+                const cardInfo = ``
+                cardinfoHtml+=cardInfo;
+                body.innerHTML = cardinfoHtml;
+            });
         });
     });
