@@ -204,9 +204,10 @@ main {
         height: 232px;
         width: 100%;
         overflow: hidden;
-        position: fixed;
         z-index: 5;
         img{
+            position: fixed;
+            max-width: 100%;
             min-width: 100%;
             min-height: 232px;
             position: relative;
@@ -216,7 +217,6 @@ main {
         }
     }
     .card-info-body{
-        margin-top: 232px;
         height: 150vh;
         z-index: 6;
         position: relative;

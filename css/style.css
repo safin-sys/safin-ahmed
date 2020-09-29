@@ -253,11 +253,12 @@ main .intro .main-footer a span {
   height: 232px;
   width: 100%;
   overflow: hidden;
-  position: fixed;
   z-index: 5;
 }
 
 .cards-info-container .img-container img {
+  position: fixed;
+  max-width: 100%;
   min-width: 100%;
   min-height: 232px;
   position: relative;
@@ -268,7 +269,6 @@ main .intro .main-footer a span {
 }
 
 .cards-info-container .card-info-body {
-  margin-top: 232px;
   height: 150vh;
   z-index: 6;
   position: relative;
