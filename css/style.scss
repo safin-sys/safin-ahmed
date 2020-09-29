@@ -186,16 +186,17 @@ main {
         z-index: 7;
         button{
             position: absolute;
-            height: 40px;
-            width: 40px;
             background-color: Transparent;
             background-repeat:no-repeat;
             border: none;
             cursor:pointer;
             overflow: hidden;
-            outline:none;
-            margin: 14px auto auto 8px;
+            margin: 16px auto auto 8px;
             filter: invert(1);
+            img{
+                height: 32px;
+                width: 32px;
+            }
         }
     }
     .img-container{
@@ -221,15 +222,58 @@ main {
         position: relative;
         background-color: black;
         .card-title{
-            padding: 16px 8px;
+            padding: 16px;
             h1{
                 color: white;
-                font-size: 24px;
+                font-size: 48px;
             }
             h6{
                 color: white;
                 font-size: 14px;
                 font-weight: 400;
+            }
+        }
+        .card-info-cta{
+            display: flex;
+            margin: 8px auto auto 16px;
+            button{
+                display: flex;
+                align-items: center;
+                margin-right: 8px;
+                height: 40px;
+                padding-left: 16px;
+                padding-right: 16px;
+                color: white;
+                background-color: #202022;
+                border: none;
+                cursor: pointer;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    filter: invert(1);
+                    margin-right: 4px;
+                }
+            }
+        }
+        .tabs{
+            margin: 48px auto auto auto;
+            width: 100%;
+            border-bottom: 1px solid #202022;
+            .tab-btns{
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+                margin: auto;
+                button{
+                    padding: 16px;
+                    color: white;
+                    background-color: black;
+                    border: none;
+                    font-size: 14px;
+                }
+                .active-tab{
+                    border-bottom: 2px solid white;
+                }
             }
         }
     }

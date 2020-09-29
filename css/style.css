@@ -233,17 +233,19 @@ main .intro .main-footer a span {
 
 .cards-info-container .card-info-nav button {
   position: absolute;
-  height: 40px;
-  width: 40px;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
-  outline: none;
-  margin: 14px auto auto 8px;
+  margin: 16px auto auto 8px;
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.cards-info-container .card-info-nav button img {
+  height: 32px;
+  width: 32px;
 }
 
 .cards-info-container .img-container {
@@ -274,18 +276,79 @@ main .intro .main-footer a span {
 }
 
 .cards-info-container .card-info-body .card-title {
-  padding: 16px 8px;
+  padding: 16px;
 }
 
 .cards-info-container .card-info-body .card-title h1 {
   color: white;
-  font-size: 24px;
+  font-size: 48px;
 }
 
 .cards-info-container .card-info-body .card-title h6 {
   color: white;
   font-size: 14px;
   font-weight: 400;
+}
+
+.cards-info-container .card-info-body .card-info-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px auto auto 16px;
+}
+
+.cards-info-container .card-info-body .card-info-cta button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: white;
+  background-color: #202022;
+  border: none;
+  cursor: pointer;
+}
+
+.cards-info-container .card-info-body .card-info-cta button img {
+  width: 20px;
+  height: 20px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin-right: 4px;
+}
+
+.cards-info-container .card-info-body .tabs {
+  margin: 48px auto auto auto;
+  width: 100%;
+  border-bottom: 1px solid #202022;
+}
+
+.cards-info-container .card-info-body .tabs .tab-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+
+.cards-info-container .card-info-body .tabs .tab-btns button {
+  padding: 16px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 14px;
+}
+
+.cards-info-container .card-info-body .tabs .tab-btns .active-tab {
+  border-bottom: 2px solid white;
 }
 
 .lang {
