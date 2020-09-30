@@ -67,14 +67,11 @@ fetch('https://api.github.com/users/safin-sys/repos')
             };
             cardsContainer.innerHTML = html;
         });
+
         //Projects Page
-        const body = document.querySelector('body');
-        const main = document.querySelector('main');
-        const projects = document.querySelector('.projects');
-        const lang = document.querySelector('.lang');
-        const footer = document.querySelector('footer');
-        const cards = document.querySelectorAll('.card');
         
+        const body = document.querySelector('body');
+        const cards = document.querySelectorAll('.card');
         cards.forEach(card=>{
             card.addEventListener('click', e=>{
                 const name = e.currentTarget.querySelector('h1').textContent;
@@ -103,8 +100,8 @@ fetch('https://api.github.com/users/safin-sys/repos')
                                     </div>
                 
                                     <div class="card-info-cta">
-                                        <a id="github-cta" href="${url}" role="button"><img src="img/github.svg" alt="github icon"> View on Github</a>
-                                        <a id="demo" href="${homepage}" role="button">Demo</a>
+                                        <a id="github-cta" href="${url}" target="_blank" role="button"><img src="img/github.svg" alt="github icon"> View on Github</a>
+                                        <a id="demo" href="${homepage}" target="_blank" role="button">Demo</a>
                                     </div>
                 
                                     <div class="tabs">
@@ -119,19 +116,26 @@ fetch('https://api.github.com/users/safin-sys/repos')
                         </div>
                         `;
                         
-                        main.style.display = 'none';
-                        projects.style.display = 'none';
-                        lang.style.display = 'none';
-                        footer.style.display = 'none';
-                        window.scrollTo(0,0);
                         body.innerHTML += projectsPageHtml;
 
-                        //Close Button
+                        const main = document.querySelector('main');
+                        const projects = document.querySelector('.projects');
+                        const lang = document.querySelector('.lang');
+                        const footer = document.querySelector('footer');
+
                         const cardInfoContainer = document.querySelector('.cards-info-container');
-                        const closeBtn = document.querySelector('#close-btn');
-                        closeBtn.addEventListener('click', e=> {
-                            cardInfoContainer.style.display = 'none';
-                        });
+
+                        if(cardInfoContainer.style.display != 'block') {
+                            main.style.display = 'none';
+                            projects.style.display = 'none';
+                            lang.style.display = 'none';
+                            footer.style.display = 'none';
+                            cardInfoContainer.style.display = 'block';
+                            window.scrollTo(0,0);
+                        };
+
+                        const closeBtn = document.querySelector('#close-btn');;
+                        closeBtn.addEventListener('click', e=>location.reload());
                     });
             });
         });
