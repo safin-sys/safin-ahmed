@@ -46,11 +46,13 @@ fetch('https://api.github.com/users/safin-sys/repos')
     .then(res=> res.json())
     .then(res=>{
         let html ='';
+        let cardinfoHtml = '';
         res.forEach(repo => {
             const name = repo.name;
             const des = repo.description;
             const lang = repo.language;
-            const url = repo.html_url;
+
+            //Projects
             const repoHtml = `
             <div class="card">
                 <section>
@@ -64,19 +66,73 @@ fetch('https://api.github.com/users/safin-sys/repos')
                 html += repoHtml;
             };
             cardsContainer.innerHTML = html;
-
         });
-        
-        //Modals
+        //Projects Page
         const body = document.querySelector('body');
-        const cards = document.querySelectorAll('div.card');
-
-        let cardinfoHtml = '';
+        const main = document.querySelector('main');
+        const projects = document.querySelector('.projects');
+        const lang = document.querySelector('.lang');
+        const footer = document.querySelector('footer');
+        const cards = document.querySelectorAll('.card');
+        
         cards.forEach(card=>{
             card.addEventListener('click', e=>{
-                const cardInfo = ``
-                cardinfoHtml+=cardInfo;
-                body.innerHTML = cardinfoHtml;
+                const name = e.currentTarget.querySelector('h1').textContent;
+                fetch('https://api.github.com/repos/safin-sys/' + name)
+                    .then(res=>res.json())
+                    .then(repo=>{
+                        const des = repo.description;
+                        const url = repo.html_url;
+                        const homepage = repo.homepage;
+
+                        const projectsPageHtml = `
+                        <div class="cards-info-container">
+                            <div class="card-info">
+                                <div class="card-info-nav">
+                                    <button id="close-btn"><img src="img/arrow.svg" alt="close button"></button>
+                                </div>
+                
+                                <div class="img-container">
+                                    <img src="img/valorant.jpg" alt="Valorant">
+                                </div>
+                
+                                <div class="card-info-body">
+                                    <div class="card-title">
+                                        <h1>${name}</h1>
+                                        <h6>${des}</h6>
+                                    </div>
+                
+                                    <div class="card-info-cta">
+                                        <a id="github-cta" href="${url}" role="button"><img src="img/github.svg" alt="github icon"> View on Github</a>
+                                        <a id="demo" href="${homepage}" role="button">Demo</a>
+                                    </div>
+                
+                                    <div class="tabs">
+                                        <div class="tab-btns">
+                                            <button class="summary active-tab">Summary</button>
+                                            <button class="languages">Languages</button>
+                                            <button class="photos">Photos</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                        
+                        main.style.display = 'none';
+                        projects.style.display = 'none';
+                        lang.style.display = 'none';
+                        footer.style.display = 'none';
+                        window.scrollTo(0,0);
+                        body.innerHTML += projectsPageHtml;
+
+                        //Close Button
+                        const cardInfoContainer = document.querySelector('.cards-info-container');
+                        const closeBtn = document.querySelector('#close-btn');
+                        closeBtn.addEventListener('click', e=> {
+                            cardInfoContainer.style.display = 'none';
+                        });
+                    });
             });
         });
     });

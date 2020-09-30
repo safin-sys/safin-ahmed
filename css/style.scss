@@ -192,6 +192,7 @@ main {
             overflow: hidden;
             margin: 16px auto auto 8px;
             filter: invert(1);
+            outline: none;
             img{
                 height: 32px;
                 width: 32px;
@@ -237,7 +238,9 @@ main {
         .card-info-cta{
             display: flex;
             margin: 8px auto auto 16px;
-            button{
+            a{
+                font-size: 14px;
+                text-decoration: none;
                 display: flex;
                 align-items: center;
                 margin-right: 8px;
@@ -248,11 +251,12 @@ main {
                 background-color: #202022;
                 border: none;
                 cursor: pointer;
+                outline: none;
                 img{
                     width: 20px;
                     height: 20px;
                     filter: invert(1);
-                    margin-right: 4px;
+                    margin: 0 8px 2px 0;
                 }
             }
         }
@@ -271,6 +275,7 @@ main {
                     background-color: black;
                     border: none;
                     font-size: 14px;
+                    outline: none;
                 }
                 .active-tab{
                     border-bottom: 2px solid white;

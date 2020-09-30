@@ -240,6 +240,7 @@ main .intro .main-footer a span {
   margin: 16px auto auto 8px;
   -webkit-filter: invert(1);
           filter: invert(1);
+  outline: none;
 }
 
 .cards-info-container .card-info-nav button img {
@@ -298,7 +299,9 @@ main .intro .main-footer a span {
   margin: 8px auto auto 16px;
 }
 
-.cards-info-container .card-info-body .card-info-cta button {
+.cards-info-container .card-info-body .card-info-cta a {
+  font-size: 14px;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,14 +316,15 @@ main .intro .main-footer a span {
   background-color: #202022;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
-.cards-info-container .card-info-body .card-info-cta button img {
+.cards-info-container .card-info-body .card-info-cta a img {
   width: 20px;
   height: 20px;
   -webkit-filter: invert(1);
           filter: invert(1);
-  margin-right: 4px;
+  margin: 0 8px 2px 0;
 }
 
 .cards-info-container .card-info-body .tabs {
@@ -346,6 +350,7 @@ main .intro .main-footer a span {
   background-color: black;
   border: none;
   font-size: 14px;
+  outline: none;
 }
 
 .cards-info-container .card-info-body .tabs .tab-btns .active-tab {
