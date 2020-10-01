@@ -174,8 +174,91 @@ main {
     }
 }
 
-.cards-info-container{
+
+
+.lang {
+    color: white;
+    padding: 32px;
+    padding-bottom: 0;
+    position: relative;
+    background-color: black;
+    h2 {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        position: sticky;
+        top: 24px;
+        z-index: 4;
+    }
+    .lang-container {
+        width: fit-content;
+        padding: 32px;
+        .collapsable{
+            margin: 8px 0;
+            .primary::before{
+                content: '\25be';
+                display: inline-block;
+                transform: rotate(30deg);
+                transition: all .2s ease-in-out;
+                margin-right: 2px;
+            }
+            .primary-rotate::before{
+                content: '\25be';
+                display: inline-block;
+                transition: all .2s ease-in-out;
+                margin-right: 2px;
+            }
+            .primary,
+            .primary-rotate{
+                font-size: 12px;
+                cursor: pointer;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .secondary::before{
+                content: '';
+                width: 2px;
+                height: 15px;
+                display: inline-block;
+                background: #404040;
+                position: absolute;
+                left: -6px;
+            }
+            .secondary:last-child{
+                margin-bottom: 8px;
+            }
+            .secondary{
+                display: none;
+                font-weight: 400;
+                margin-left: 8px;
+                text-transform: uppercase;
+                overflow: hidden;
+                max-height: 0px;
+                transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+}
+
+footer{
+    background-color: black;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: white;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+safin {
     display: none;
+}
+
+//Projects Page
+.cards-info-container{
     width: 100%;
     max-height: 150vh;
     overflow-y: scroll;
@@ -284,85 +367,4 @@ main {
             }
         }
     }
-}
-
-.lang {
-    color: white;
-    padding: 32px;
-    padding-bottom: 0;
-    position: relative;
-    background-color: black;
-    h2 {
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        position: sticky;
-        top: 24px;
-        z-index: 4;
-    }
-    .lang-container {
-        width: fit-content;
-        padding: 32px;
-        .collapsable{
-            margin: 8px 0;
-            .primary::before{
-                content: '\25be';
-                display: inline-block;
-                transform: rotate(30deg);
-                transition: all .2s ease-in-out;
-                margin-right: 2px;
-            }
-            .primary-rotate::before{
-                content: '\25be';
-                display: inline-block;
-                transition: all .2s ease-in-out;
-                margin-right: 2px;
-            }
-            .primary,
-            .primary-rotate{
-                font-size: 12px;
-                cursor: pointer;
-                user-select: none;
-                -webkit-tap-highlight-color: transparent;
-            }
-            .secondary::before{
-                content: '';
-                width: 2px;
-                height: 15px;
-                display: inline-block;
-                background: #404040;
-                position: absolute;
-                left: -6px;
-            }
-            .secondary:last-child{
-                margin-bottom: 8px;
-            }
-            .secondary{
-                display: none;
-                font-weight: 400;
-                margin-left: 8px;
-                text-transform: uppercase;
-                overflow: hidden;
-                max-height: 0px;
-                transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
-            }
-        }
-    }
-}
-
-footer{
-    background-color: black;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p{
-        color: white;
-        text-align: center;
-        font-size: 12px;
-    }
-}
-
-safin {
-    display: none;
 }
