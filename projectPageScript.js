@@ -28,7 +28,7 @@ fetch('https://api.github.com/users/safin-sys/repos')
 
         const closeBtn = document.querySelector('#close-btn');
         closeBtn.addEventListener('click', e=>{
-            window.history.back();
+            window.location.href = '../'
         });
     });
 });
