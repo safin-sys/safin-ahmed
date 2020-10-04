@@ -126,12 +126,23 @@ main .intro .main-footer a span {
   height: 64px;
   background-color: #202022;
   z-index: 3;
-  -webkit-transform: translateY(-64px);
-          transform: translateY(-64px);
+  -webkit-transform: translateY(-68px);
+          transform: translateY(-68px);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   -webkit-box-shadow: 0 8px 6px -6px #151515;
           box-shadow: 0 8px 6px -6px #151515;
+}
+
+.sticky .text-container {
+  height: 100%;
+  margin: 22px 60px;
+}
+
+.sticky .text-container h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
 }
 
 .transform {

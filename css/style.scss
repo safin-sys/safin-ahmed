@@ -95,9 +95,18 @@ main {
     height: 64px;
     background-color: #202022;
     z-index: 3;
-    transform: translateY(-64px);
+    transform: translateY(-68px);
     transition: all .2s ease-in-out;
     box-shadow: 0 8px 6px -6px #151515;
+    .text-container{
+        height: 100%;
+        margin: 22px 60px;
+        h2{
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+        }
+    }
 }
 
 .transform {
