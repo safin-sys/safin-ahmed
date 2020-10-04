@@ -100,8 +100,10 @@ main {
     box-shadow: 0 8px 6px -6px #151515;
     .text-container{
         height: 100%;
-        margin: 22px 60px;
+        display: flex;
+        margin-left: 60px;
         h2{
+            align-self: center;
             font-size: 22px;
             font-weight: 600;
             color: white;
