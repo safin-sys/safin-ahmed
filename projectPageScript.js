@@ -1,5 +1,5 @@
 const cardInfoContainer = document.querySelector('.cards-info-container');
-const htmlPathName = window.location.pathname;
+const htmlPathName = window.location.pathname.replace('/safin-ahmed/projectPages/', '');
 
 fetch('https://api.github.com/users/safin-sys/repos')
 .then(res=> res.json())
