@@ -54,7 +54,7 @@ fetch('https://api.github.com/users/safin-sys/repos')
 
             //Projects
             const repoHtml = `
-            <div class="card" onclick="document.location.href='projectPages/${name}.html'">
+            <div class="card" onclick="document.location.href='projectPages/${name}.html'" tabindex="0">
                 <section>
                     <h1>${name}</h1>
                     <p class="description">${des}</p>
