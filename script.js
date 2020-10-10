@@ -18,7 +18,6 @@ const collapsable = document.querySelectorAll('.collapsable');
 collapsable.forEach(elem=>{
     const primary = elem.children[0];
     const secondary = elem.children[1];
-    console.log(secondary.children.length);
     
     primary.addEventListener('click', e=>{
         e.target.classList.toggle('primary-rotate');
