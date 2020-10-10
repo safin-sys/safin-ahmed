@@ -18,12 +18,13 @@ const collapsable = document.querySelectorAll('.collapsable');
 collapsable.forEach(elem=>{
     const primary = elem.children[0];
     const secondary = elem.children[1];
+    console.log(secondary.children.length);
     
     primary.addEventListener('click', e=>{
+        e.target.classList.toggle('primary-rotate');
+        e.target.classList.toggle('primary');
         for(let i = 0; i < secondary.children.length; i++) {
             secondary.children[i].classList.toggle('active');
-            e.target.classList.toggle('primary-rotate');
-            e.target.classList.toggle('primary');
 
             if(secondary.children[i].classList.contains('active')){
                 secondary.children[i].style.display = 'block';
