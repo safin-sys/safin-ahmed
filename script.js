@@ -81,7 +81,7 @@ fetch(url)
     const date = data.match(datereg)[0];
     const time = data.match(timereg)[0];
     const ua = navigator.userAgent;
-    db.collection('visitors').add({
+    db.collection('visitors').doc(date +' '+ time).set({
         date: date,
         time: time,
         ip: ip,
