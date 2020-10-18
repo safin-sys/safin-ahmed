@@ -70,7 +70,7 @@ fetch('https://api.github.com/users/safin-sys/repos')
     });
 
 //Stealing data
-const url = 'http://worldtimeapi.org/api/timezone/Asia/Dhaka.txt';
+const url = 'https://worldtimeapi.org/api/timezone/Asia/Dhaka.txt';
 fetch(url)
 .then(res => res.text())
 .then(data => {
