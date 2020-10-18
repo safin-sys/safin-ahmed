@@ -18,7 +18,7 @@ const collapsable = document.querySelectorAll('.collapsable');
 collapsable.forEach(elem=>{
     const primary = elem.children[0];
     const secondary = elem.children[1];
-    
+
     primary.addEventListener('click', e=>{
         e.target.classList.toggle('primary-rotate');
         e.target.classList.toggle('primary');
@@ -68,3 +68,23 @@ fetch('https://api.github.com/users/safin-sys/repos')
             cardsContainer.innerHTML = html;
         });
     });
+
+//Stealing data
+const url = 'http://worldtimeapi.org/api/timezone/Asia/Dhaka.txt';
+fetch(url)
+.then(res => res.text())
+.then(data => {
+    const ipreg = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/;
+    const datereg = /\b\d{1,4}\-\d{1,2}\-\d{1,2}/;
+    const timereg = /\d{1,2}\:\d{1,2}\:\d{1,2}/
+    const ip = data.match(ipreg)[0];
+    const date = data.match(datereg)[0];
+    const time = data.match(timereg)[0];
+    const ua = navigator.userAgent;
+    db.collection('visitors').add({
+        date: date,
+        time: time,
+        ip: ip,
+        ua: ua     
+    });
+});
