@@ -3,8 +3,7 @@ const stackBtns = document.querySelectorAll('.stack__btn');
 const stackContents = document.querySelectorAll('.stack__content');
 
 const state = {
-    active: 'programming',
-    containClass: window.innerWidth > 768 ? 'block' : 'inline-block'
+    active: 'programming'
 };
 
 stackBtns.forEach(btn => {
@@ -12,8 +11,8 @@ stackBtns.forEach(btn => {
         btn.classList.add('stack__btn-active');
     };
 
-    stackContents.forEach(contain => {
-        contain.id === state.active ? contain.style.display = state.containClass : contain.style.display = "none";
+    stackContents.forEach(content => {
+        content.id === state.active ? content.style.display = 'block' : content.style.display = "none";
     });
     
     btn.addEventListener('click', () => {
@@ -27,8 +26,8 @@ stackBtns.forEach(btn => {
             btn.classList.add('stack__btn-active');
         };
 
-        stackContents.forEach(contain => {
-            contain.id === state.active ? contain.style.display = state.containClass : contain.style.display = "none";
+        stackContents.forEach(content => {
+            content.id === state.active ? content.style.display = 'block' : content.style.display = "none";
         });
     });
 });
