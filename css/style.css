@@ -25,7 +25,7 @@ body header p {
   line-height: 1.5rem;
 }
 
-body h1 {
+body .sub_header {
   padding: 24px;
   font-size: 1.5rem;
 }
@@ -53,7 +53,6 @@ body .stack__btns ul {
 
 body .stack__btns ul .stack__btn {
   min-width: 110px;
-  max-width: 110px;
   padding: 10px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,6 +108,9 @@ body .stack .sep {
   body {
     width: 90vw;
   }
+  body header h1 {
+    text-align: center;
+  }
   body .stack {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -127,6 +129,7 @@ body .stack .sep {
             flex-direction: column;
   }
   body .stack__btns ul .stack__btn {
+    max-width: 110px;
     padding: 10px 6px;
     border-bottom: none;
     border-right: 2px solid #9a9a9a;

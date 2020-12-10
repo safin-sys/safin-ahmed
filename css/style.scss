@@ -19,7 +19,7 @@ body {
             line-height: 1.5rem;
         }
     }
-    h1 {
+    .sub_header {
         padding: 24px;
         font-size: 1.5rem;
     }
@@ -34,7 +34,6 @@ body {
                 justify-content: center;
                 .stack__btn {
                     min-width: 110px;
-                    max-width: 110px;
                     padding: 10px 16px;
                     display: flex;
                     flex-direction: column;
@@ -74,6 +73,11 @@ body {
 @media (max-width: 768px) {
     body {
         width: 90vw;
+        header {
+            h1 {
+                text-align: center;
+            }
+        }
         .stack {
             display: flex;
             &__btns {
@@ -84,6 +88,7 @@ body {
                     width: auto;
                     flex-direction: column;
                     .stack__btn {
+                        max-width: 110px;
                         padding: 10px 6px;
                         border-bottom: none;
                         border-right: 2px solid #9a9a9a;
