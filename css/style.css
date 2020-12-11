@@ -246,6 +246,15 @@ body footer a:hover {
   text-decoration: underline;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: black;
+}
+
 @media (max-width: 1000px) {
   body {
     width: 90vw;
