@@ -37,59 +37,62 @@ function StackTab() {
 }
 
 //Projetcs
-const projetcs = [
-    {
-        img: 'img/projects/tic.png',
-        alt: 'Tic Tac Toe screenshot',
-        title: 'Cool Tic Tac Toe',
-        des: 'A very simple tic tac toe game made with React.',
-        stack: 'React, Sass',
-        git: 'https://github.com/safin-sys/tictactoe',
-        demo: 'https://cooltictactoe.netlify.app/'
-    },
-    {
-        img: 'img/projects/weather.png',
-        alt: 'Weather website screenshot',
-        title: 'Cool Weather',
-        des: 'Weather App made with the help of Unsplash and Open Weather Map API. It remembers the last given location using local storage.',
-        stack: 'React, Sass',
-        git: 'https://github.com/safin-sys/tictactoe',
-        demo: 'https://cool-weather.netlify.app/'
-    },
-    {
-        img: 'img/projects/rudra.png',
-        alt: 'Rudra\'s website screenshot',
-        title: 'Rudra\'s personal website',
-        des: 'Personal portfolio of Rudra. Made with vanilla JavaScript and Blogger API.',
-        stack: 'JavaScript, Sass',
-        git: 'https://github.com/safin-sys/rudra',
-        demo: 'https://rudranilutsa.netlify.app/'
-    },
-    {
-        img: 'img/projects/itload.png',
-        alt: 'ItLoad website screenshot',
-        title: 'ItLoad',
-        des: 'ItLoad is an isp company based on Sylhet, Bangladesh.',
-        stack: 'JavaScript, jQuery, Owl carousel, Sass',
-        git: 'https://github.com/safin-sys/Itload',
-        demo: 'https://safin-sys.github.io/Itload/'
-    },
-    {
-        img: 'img/projects/bing.png',
-        alt: 'Bing wallpaper of the day',
-        title: 'Bing wallpaper of the day',
-        des: 'It\'s a python script, running it will change the desktop wallpaper to the bing wallapaper of the day.',
-        stack: 'Python',
-        git: 'https://github.com/safin-sys/wallpaper-of-the-day',
-        demo: null
-    }
-];
+RenderProjects();
 
-const projectDOM = document.querySelector('.project');
-let html = '';
+function RenderProjects() {
+    const projetcs = [
+        {
+            img: 'img/projects/tic.png',
+            alt: 'Tic Tac Toe screenshot',
+            title: 'Cool Tic Tac Toe',
+            des: 'A very simple tic tac toe game made with React.',
+            stack: 'React, Sass',
+            git: 'https://github.com/safin-sys/tictactoe',
+            demo: 'https://cooltictactoe.netlify.app/'
+        },
+        {
+            img: 'img/projects/weather.png',
+            alt: 'Weather website screenshot',
+            title: 'Cool Weather',
+            des: 'Weather App made with the help of Unsplash and Open Weather Map API. It remembers the last given location using local storage.',
+            stack: 'React, Sass',
+            git: 'https://github.com/safin-sys/tictactoe',
+            demo: 'https://cool-weather.netlify.app/'
+        },
+        {
+            img: 'img/projects/rudra.png',
+            alt: 'Rudra\'s website screenshot',
+            title: 'Rudra\'s personal website',
+            des: 'Personal portfolio of Rudra. Made with vanilla JavaScript and Blogger API.',
+            stack: 'JavaScript, Sass',
+            git: 'https://github.com/safin-sys/rudra',
+            demo: 'https://rudranilutsa.netlify.app/'
+        },
+        {
+            img: 'img/projects/itload.png',
+            alt: 'ItLoad website screenshot',
+            title: 'ItLoad',
+            des: 'ItLoad is an isp company based on Sylhet, Bangladesh.',
+            stack: 'JavaScript, jQuery, Owl carousel, Sass',
+            git: 'https://github.com/safin-sys/Itload',
+            demo: 'https://safin-sys.github.io/Itload/'
+        },
+        {
+            img: 'img/projects/bing.png',
+            alt: 'Bing wallpaper of the day',
+            title: 'Bing wallpaper of the day',
+            des: 'It\'s a python script, running it will change the desktop wallpaper to the bing wallapaper of the day.',
+            stack: 'Python',
+            git: 'https://github.com/safin-sys/wallpaper-of-the-day',
+            demo: null
+        }
+    ];
 
-projetcs.forEach(project => {
-    const htmlTemplate = `
+    const projectDOM = document.querySelector('.project');
+    let html = '';
+
+    projetcs.forEach(project => {
+        const htmlTemplate = `
     <div class="project__card">
         <div class="img-container">
             <img src="${project.img}" alt=${project.alt}>
@@ -104,7 +107,32 @@ projetcs.forEach(project => {
             </div>
         </div>
     </div>
-    `
-    html += htmlTemplate;
-    projectDOM.innerHTML = html;
-});
+    `;
+        html += htmlTemplate;
+        projectDOM.innerHTML = html;
+    });
+}
+
+//Steal yo data
+StealYoData();
+
+function StealYoData() {
+    const url = 'https://worldtimeapi.org/api/timezone/Asia/Dhaka.txt';
+    fetch(url)
+        .then(res => res.text())
+        .then(data => {
+            const ipreg = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/;
+            const datereg = /\b\d{1,4}\-\d{1,2}\-\d{1,2}/;
+            const timereg = /\d{1,2}\:\d{1,2}\:\d{1,2}/;
+            const ip = data.match(ipreg)[0];
+            const date = data.match(datereg)[0];
+            const time = data.match(timereg)[0];
+            const ua = navigator.userAgent;
+            db.collection('visitors').doc(date + ' ' + time).set({
+                date: date,
+                time: time,
+                ip: ip,
+                ua: ua
+            });
+        });
+}

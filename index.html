@@ -10,6 +10,7 @@
     <header>
         <h1>Safin Ahmed.</h1>
         <p>I like making websites. I am pretty good at HTML, CSS, and JavaScript and currently learning the JavaScript frontend framework React and planning to learn a backend framework next. Possibly NodeJS or Django.</p>
+        <a href="mailto:mdsafinofficial@gmail.com">mdsafinofficial@gmail.com</a>
     </header>
     <hr>
     <h1 class="sub_header">Technologies</h1>
@@ -105,5 +106,23 @@
         <a href="https://github.com/safin-sys" target="_blank"><img src="img/icons/github.svg" alt="Github icon from FontAwesome">Github</a>
     </footer>
     <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyAnqVAiDuBzjQ79jyBWpJN1IR4paZAmzVs",
+        authDomain: "studied-groove-235216.firebaseapp.com",
+        databaseURL: "https://studied-groove-235216.firebaseio.com",
+        projectId: "studied-groove-235216",
+        storageBucket: "studied-groove-235216.appspot.com",
+        messagingSenderId: "850328408738",
+        appId: "1:850328408738:web:d2c3c116f00ccc04e03dfb",
+        measurementId: "G-ENCHXT3VD1"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
 </body>
 </html>
