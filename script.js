@@ -114,21 +114,13 @@ function RenderProjects() {
 }
 
 //Steal yo data
-const url = 'https://worldtimeapi.org/api/timezone/Asia/Dhaka.txt';
+const url = 'https://api.ipify.org/?format=json';
 fetch(url)
-    .then(res => res.text())
-    .then(data => {
-        const ipreg = /\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/;
-        const datereg = /\b\d{1,4}\-\d{1,2}\-\d{1,2}/;
-        const timereg = /\d{1,2}\:\d{1,2}\:\d{1,2}/;
-        const ip = data.match(ipreg)[0];
-        const date = data.match(datereg)[0];
-        const time = data.match(timereg)[0];
-        const ua = navigator.userAgent;
-        db.collection('visitors').doc(date + ' ' + time).set({
-            date: date,
-            time: time,
-            ip: ip,
-            ua: ua
-        });
+.then(res => res.json())
+.then(data => {
+    const date = new Date();
+    db.collection('visitors').doc(date.toString()).set({
+        ip: data.ip,
+        ua: navigator.userAgent
     });
+});
