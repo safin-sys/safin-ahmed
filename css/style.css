@@ -7,7 +7,7 @@
 }
 
 body {
-  width: 60vw;
+  width: 60%;
   margin: auto;
 }
 
@@ -299,7 +299,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 1000px) {
   body {
-    width: 90vw;
+    width: 90%;
   }
   body header h1 {
     text-align: center;

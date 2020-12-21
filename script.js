@@ -42,13 +42,13 @@ RenderProjects();
 function RenderProjects() {
     const projetcs = [
         {
-            img: 'img/projects/tic.png',
-            alt: 'Tic Tac Toe screenshot',
-            title: 'Cool Tic Tac Toe',
-            des: 'A very simple tic tac toe game made with React.',
+            img: 'img/projects/movie.png',
+            alt: 'Movie website screenshot',
+            title: 'Cool Movie App',
+            des: 'A very cool movie app where you can definitly find something to watch. All the data comes from https://www.themoviedb.org API.',
             stack: 'React, Sass',
-            git: 'https://github.com/safin-sys/tictactoe',
-            demo: 'https://cooltictactoe.netlify.app/'
+            git: 'https://github.com/safin-sys/cool-movie-app',
+            demo: 'https://coolmovieapp.netlify.app/'
         },
         {
             img: 'img/projects/weather.png',
@@ -60,6 +60,15 @@ function RenderProjects() {
             demo: 'https://cool-weather.netlify.app/'
         },
         {
+            img: 'img/projects/tic.png',
+            alt: 'Tic Tac Toe screenshot',
+            title: 'Cool Tic Tac Toe',
+            des: 'A very simple tic tac toe game made with React.',
+            stack: 'React, Sass',
+            git: 'https://github.com/safin-sys/tictactoe',
+            demo: 'https://cooltictactoe.netlify.app/'
+        },
+        {
             img: 'img/projects/rudra.png',
             alt: 'Rudra\'s website screenshot',
             title: 'Rudra\'s personal website',
@@ -67,15 +76,6 @@ function RenderProjects() {
             stack: 'JavaScript, Sass',
             git: 'https://github.com/safin-sys/rudra',
             demo: 'https://rudranilutsa.netlify.app/'
-        },
-        {
-            img: 'img/projects/itload.png',
-            alt: 'ItLoad website screenshot',
-            title: 'ItLoad',
-            des: 'ItLoad is an isp company based on Sylhet, Bangladesh.',
-            stack: 'JavaScript, jQuery, Owl carousel, Sass',
-            git: 'https://github.com/safin-sys/Itload',
-            demo: 'https://safin-sys.github.io/Itload/'
         },
         {
             img: 'img/projects/bing.png',
@@ -114,13 +114,13 @@ function RenderProjects() {
 }
 
 //Steal yo data
-const url = 'https://api.ipify.org/?format=json';
-fetch(url)
-.then(res => res.json())
-.then(data => {
-    const date = new Date();
-    db.collection('visitors').doc(date.toString()).set({
-        ip: data.ip,
-        ua: navigator.userAgent
-    });
-});
+// const url = 'https://api.ipify.org/?format=json';
+// fetch(url)
+// .then(res => res.json())
+// .then(data => {
+//     const date = new Date();
+//     db.collection('visitors').doc(date.toString()).set({
+//         ip: data.ip,
+//         ua: navigator.userAgent
+//     });
+// });

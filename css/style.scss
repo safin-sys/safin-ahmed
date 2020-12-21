@@ -6,7 +6,7 @@
 }
 
 body {
-    width: 60vw;
+    width: 60%;
     margin: auto;
     header {
         padding: 24px;
@@ -201,7 +201,7 @@ body::-webkit-scrollbar-thumb{
 
 @media (max-width: 1000px) {
     body {
-        width: 90vw;
+        width: 90%;
         header {
             h1 {
                 text-align: center;
