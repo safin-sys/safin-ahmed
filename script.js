@@ -114,13 +114,13 @@ function RenderProjects() {
 }
 
 //Steal yo data
-// const url = 'https://api.ipify.org/?format=json';
-// fetch(url)
-// .then(res => res.json())
-// .then(data => {
-//     const date = new Date();
-//     db.collection('visitors').doc(date.toString()).set({
-//         ip: data.ip,
-//         ua: navigator.userAgent
-//     });
-// });
+const url = 'https://api.ipify.org/?format=json';
+fetch(url)
+.then(res => res.json())
+.then(data => {
+    const date = new Date();
+    db.collection('visitors').doc(date.toString()).set({
+        ip: data.ip,
+        ua: navigator.userAgent
+    });
+});
