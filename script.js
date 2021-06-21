@@ -1,4 +1,4 @@
-import saflb from "./saflb";
+import saflb from "./saflb.js";
 
 //Stack Tab
 StackTab();

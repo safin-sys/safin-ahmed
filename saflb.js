@@ -8,7 +8,7 @@ async function getIP() {
 
 export default async function saflb(name, url) {
     const ipInfo = await getIP()
-    const currentDoc = db.collection('visitors').doc(`${name} | ${url}`)
+    const currentDoc = db.collection('visitors').doc(`${name}`)
 
     currentDoc.get().then(doc => {
         if (!doc.exists) {
