@@ -53,6 +53,33 @@ function RenderProjects() {
             demo: 'https://coolmovieapp.netlify.app/'
         },
         {
+            img: 'img/projects/awwa.png',
+            alt: 'AWWA website screenshot',
+            title: 'AWWA',
+            des: 'AWWA is a Singapore based social service agency. The site below is a redesign of their current site made by Nadirah Khaliq.',
+            stack: 'React, Gatsby',
+            git: 'https://github.com/safin-sys/awwa',
+            demo: 'https://awwa.netlify.app/'
+        },
+        {
+            img: 'img/projects/tourny.png',
+            alt: 'Tourny website screenshot',
+            title: 'Tourny',
+            des: 'A tournament planner for the online game League of Legends. It helps show important information about gaming tournaments to the players.',
+            stack: 'React, NextJS, ChakraUI',
+            git: 'https://github.com/safin-sys/tourny',
+            demo: 'https://tourny.netlify.app/'
+        },
+        {
+            img: 'img/projects/rudra.png',
+            alt: 'Rudra\'s website screenshot',
+            title: 'Rudra\'s personal website',
+            des: 'Rudra wanted to update the site frequently without touching the code, so I implemented a headless CMS.',
+            stack: 'React, NextJS, SanityCMS',
+            git: 'https://github.com/safin-sys/rudra-nil-utsa',
+            demo: 'https://rudranilutsa.netlify.app/'
+        },
+        {
             img: 'img/projects/weather.png',
             alt: 'Weather website screenshot',
             title: 'Cool Weather',
@@ -69,24 +96,6 @@ function RenderProjects() {
             stack: 'React, Sass',
             git: 'https://github.com/safin-sys/tictactoe',
             demo: 'https://cooltictactoe.netlify.app/'
-        },
-        {
-            img: 'img/projects/rudra.png',
-            alt: 'Rudra\'s website screenshot',
-            title: 'Rudra\'s personal website',
-            des: 'Personal portfolio of Rudra. Made with vanilla JavaScript and Blogger API.',
-            stack: 'JavaScript, Sass',
-            git: 'https://github.com/safin-sys/rudra',
-            demo: 'https://rudranilutsa.netlify.app/'
-        },
-        {
-            img: 'img/projects/bing.png',
-            alt: 'Bing wallpaper of the day',
-            title: 'Bing wallpaper of the day',
-            des: 'It\'s a python script, running it will change the desktop wallpaper to the bing wallapaper of the day.',
-            stack: 'Python',
-            git: 'https://github.com/safin-sys/wallpaper-of-the-day',
-            demo: null
         }
     ];
 
@@ -115,4 +124,4 @@ function RenderProjects() {
     });
 }
 
-saflb('Safin Ahmed', 'https://safin.netlify.app/')
+//saflb('Safin Ahmed', 'https://safin.netlify.app/')
