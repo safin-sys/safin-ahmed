@@ -1,127 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safin Ahmed</title>
-</head>
-<body>
-    <header>
-        <h1>Safin Ahmed.</h1>
-        <a href="mailto:mdsafinofficial@gmail.com">mdsafinofficial@gmail.com</a>
-    </header>
-    <hr>
-    <h1 class="sub_header">Technologies</h1>
-
-    <section class="stack">
-        <div class="stack__btns">
-            <ul>
-                <li class="stack__btn programming">
-                    <span>Programming</span>
-                    <span>Languages</span>
-                </li>
-
-                <li class="stack__btn frontend">
-                    <span>Front-end</span>
-                    <span>Technologies</span>
-                </li>
-
-                <li class="stack__btn deploy">
-                    <span>Deployment</span>
-                    <span>Technologies</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="stack__content" id="programming">
-            <ul>
-                <li>
-                    <img src="img/icons/js.svg" alt="JavaScript icon from FontAwesome">
-                    <p>JavaScript</p>
-                </li>
-                <li>
-                    <img style="padding: 2px;" src="img/icons/ts.svg" alt="TypeScript icon from iconify.design">
-                    <p>TypeScript</p>
-                </li>
-                <li>
-                    <img src="img/icons/py.svg" alt="Python icon from FontAwesome">
-                    <p>Python</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="stack__content" id="frontend">
-            <ul>
-                <li>
-                    <img src="img/icons/html.svg" alt="HTML5 icon from FontAwesome">
-                    <p>HTML5</p>
-                </li>
-                <li>
-                    <img src="img/icons/css.svg" alt="CSS3 icon from FontAwesome">
-                    <p>CSS3</p>
-                </li>
-                <li>
-                    <img src="img/icons/sass.svg" alt="Sass icon from FontAwesome">
-                    <p>Sass</p>
-                </li>
-                <li>
-                    <img src="img/icons/react.svg" alt="React icon from FontAwesome">
-                    <p>React</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="stack__content" id="deploy">
-            <ul>
-                <li>
-                    <img src="img/icons/github.svg" alt="Github icon from FontAwesome">
-                    <p>Github</p>
-                </li>
-                <li>
-                    <img src="img/icons/netlify.svg" alt="Netlify icon from iconify.design">
-                    <p>Netlify</p>
-                </li>
-                <li>
-                    <img src="img/icons/firebase.svg" alt="Firebase icon from iconify.design">
-                    <p>Firebase</p>
-                </li>
-                <li>
-                    <img src="img/icons/npm.svg" alt="NPM icon from FontAwesome">
-                    <p>NPM</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <h1 class="sub_header">Projects</h1>
-
-    <section class="project">
-    </section>
-
-    <h1 class="sub_header">Get in touch</h1>
-    <footer>
-        <a href="mailto:mdsafinofficial@gmail.com"><img src="img/icons/email.svg" alt="Envolope icon from FontAwesome">Email</a>
-        <a href="https://github.com/safin-sys" target="_blank"><img src="img/icons/github.svg" alt="Github icon from FontAwesome">Github</a>
-    </footer>
-    <script type="module" src="script.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-    <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyAnqVAiDuBzjQ79jyBWpJN1IR4paZAmzVs",
-        authDomain: "studied-groove-235216.firebaseapp.com",
-        databaseURL: "https://studied-groove-235216.firebaseio.com",
-        projectId: "studied-groove-235216",
-        storageBucket: "studied-groove-235216.appspot.com",
-        messagingSenderId: "850328408738",
-        appId: "1:850328408738:web:d2c3c116f00ccc04e03dfb",
-        measurementId: "G-ENCHXT3VD1"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    const db = firebase.firestore();
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
