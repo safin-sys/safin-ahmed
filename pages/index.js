@@ -1,14 +1,10 @@
 import { Container, Heading } from '@chakra-ui/layout'
-import Head from 'next/head'
+import Hero from '../components/Hero'
 
 export default function Home() {
 	return (
-		<Container>
-			<Head>
-				<title>Portfolio Site</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<Heading>Hello Next.js</Heading>
+		<Container maxW="container.lg">
+			<Hero />
 		</Container>
 	)
 }
