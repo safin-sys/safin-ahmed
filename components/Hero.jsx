@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/layout";
+import { Box, Heading } from "@chakra-ui/layout";
 
 export default function Hero() {
     return (
