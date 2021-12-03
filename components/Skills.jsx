@@ -40,6 +40,6 @@ export default function Skills() {
 const Skill = ({ name, image }) => (
     <Box role="group">
         <Text fontSize="14px" mb="2px">{name}</Text>
-        <Image _groupHover={{opacity: 1}} filter="grayscale(100%) brightness(80%) contrast(100%)" opacity="0" h="400px" maxW="400px" pos="absolute" top="20%" right="0" src={image} alt={name} />
+        <Image _groupHover={[,{opacity: 1}]} filter="grayscale(100%) brightness(80%) contrast(100%)" opacity="0" h="400px" maxW="400px" pos="absolute" top="20%" right="0" src={image} alt={name} />
     </Box>
 )
