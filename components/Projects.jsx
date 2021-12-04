@@ -17,6 +17,14 @@ const images = [
     {
         src: "https://source.unsplash.com/random/803x603",
         alt: "random image 4",
+    },
+    {
+        src: "https://source.unsplash.com/random/804x604",
+        alt: "random image 5",
+    },
+    {
+        src: "https://source.unsplash.com/random/805x605",
+        alt: "random image 6",
     }
 ]
 
