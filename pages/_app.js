@@ -28,13 +28,13 @@ function MyApp({ Component, pageProps }) {
 				<meta property="og:url" content="https://safin.netlify.app/" />
 				<meta property="og:title" content="Safin Ahmed" />
 				<meta property="og:description" content="Hi, I am a self-taught front-end developer and this is my portfolio." />
-				<meta property="og:image" content />
+				<meta property="og:image" />
 				{/* Twitter */}
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://safin.netlify.app/" />
 				<meta property="twitter:title" content="Safin Ahmed" />
 				<meta property="twitter:description" content="Hi, I am a self-taught front-end developer and this is my portfolio." />
-				<meta property="twitter:image" content />
+				<meta property="twitter:image" />
 				<meta name="google-site-verification" content="uR73wVtmcchCUfsHMV8S2bJc2qHxSQAiC5p1wXTd1Fw" />
 			</Head>
 			<ChakraProvider theme={theme}>
