@@ -9,7 +9,7 @@ export const Footer = () => {
         toast({
             title: 'Copied!',
             status: 'success',
-            duration: 90000000,
+            duration: 9000,
             isClosable: true,
             position: 'bottom-right',
             variant: 'left-accent',
@@ -19,7 +19,7 @@ export const Footer = () => {
         <Box h="60px" fontSize="14px" letterSpacing="2px">
             <Flex flexWrap="wrap" justifyContent="center">
                 <Link href="mailto:safinahmed248@gmail.com">safinahmed248@gmail.com</Link>
-                <Text ml="1rem" whiteSpace="nowrap" onClick={handleCopy} cursor="pointer">
+                <Text ml="1rem" whiteSpace="nowrap" onClick={handleCopy} cursor="pointer" userSelect="none">
                     copy email <CopyIcon />
                 </Text>
             </Flex>
