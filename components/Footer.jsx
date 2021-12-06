@@ -9,9 +9,10 @@ export const Footer = () => {
         toast({
             title: 'Copied!',
             status: 'success',
-            duration: 9000,
+            duration: 90000000,
             isClosable: true,
-            position: 'bottom-right'
+            position: 'bottom-right',
+            variant: 'left-accent',
         });
     };
     return (

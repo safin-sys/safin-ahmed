@@ -28,7 +28,8 @@ const ContactForm = () => {
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
-                position: 'bottom-right'
+                position: 'bottom-right',
+                variant: 'left-accent',
             })
         } else {
             toast({
@@ -36,7 +37,8 @@ const ContactForm = () => {
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
-                position: 'bottom-right'
+                position: 'bottom-right',
+                variant: 'left-accent',
             })
         }
     }

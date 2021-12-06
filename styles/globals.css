@@ -15,3 +15,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.chakra-alert {
+  border-inline-start-color: #262626 !important;
+  background: #fff !important;
+  color: #262626 !important;
+}
+
+.chakra-alert__icon {
+  color: #262626 !important;
+}
