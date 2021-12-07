@@ -6,7 +6,7 @@ import Skills from '../components/Skills'
 
 export default function Home() {
 	return (
-		<Container maxW="container.lg">
+		<Container maxW="container.lg" style={{ scrollSnapType: 'y mandatory' }}>
 			<Hero />
 			<Skills />
 			<Projects />

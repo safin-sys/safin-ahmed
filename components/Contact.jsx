@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/button'
 import { FormLabel } from '@chakra-ui/form-control'
 import { Input } from '@chakra-ui/input'
-import { Box, Flex, Grid } from '@chakra-ui/layout'
+import { Box, Flex, Grid, Heading } from '@chakra-ui/layout'
 import { Textarea } from '@chakra-ui/textarea'
 import { useToast } from '@chakra-ui/toast'
 import { useForm } from '@formspree/react';
@@ -9,8 +9,9 @@ import { Footer } from './Footer'
 
 export default function Contact() {
     return (
-        <Flex flexDir="column" alignItems="center">
+        <Flex style={{ scrollSnapAlign: 'start' }} flexDir="column" alignItems="center">
             <Grid placeContent="center" h="calc(100vh - 60px)">
+            <Heading color="secondary" fontWeight="normal" fontSize="12px" letterSpacing="3px" mb="30px">CONTACT</Heading>
                 <ContactForm />
             </Grid>
             <Footer />
@@ -48,11 +49,11 @@ const ContactForm = () => {
                 onSubmit={handleSubmit}
             >
                 <FormLabel fontSize="14px" letterSpacing="2px">Name</FormLabel>
-                <Input fontSize="14px" borderColor="primary" mb="1rem" type="text" name="name" placeholder="Your name" />
+                <Input borderRadius="0" fontSize="14px" borderColor="primary" mb="1rem" type="text" name="name" placeholder="Your name" />
                 <FormLabel fontSize="14px" letterSpacing="2px">Email</FormLabel>
-                <Input fontSize="14px" borderColor="primary" mb="1rem" type="email" name="_replyto" placeholder="Your email" />
+                <Input borderRadius="0" fontSize="14px" borderColor="primary" mb="1rem" type="email" name="_replyto" placeholder="Your email" />
                 <FormLabel fontSize="14px" letterSpacing="2px">Message</FormLabel>
-                <Textarea fontSize="14px" borderColor="primary" mb="1rem" name="message" placeholder="Your message"></Textarea>
+                <Textarea borderRadius="0" fontSize="14px" borderColor="primary" mb="1rem" name="message" placeholder="Your message"></Textarea>
                 <Button fontSize="14px" onClick={handleToast} bgColor="primary" color="white" type="submit">Send</Button>
             </form>
         </Box>

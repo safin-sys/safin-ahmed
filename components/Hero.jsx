@@ -3,7 +3,7 @@ import { Box, Heading, Link } from "@chakra-ui/layout";
 
 export default function Hero() {
     return (
-        <Box as="header" mt={["40px", "40px", "120px"]} h="calc(100vh - 120px)">
+        <Box as="header" mt={["40px", "40px", "120px"]} h="calc(100vh - 120px)" style={{ scrollSnapAlign: 'end' }}>
             <Heading bgColor="primary" color="white" display="inline" fontWeight="normal" fontSize="24px" px="1rem">
                 Safin Ahmed
             </Heading>

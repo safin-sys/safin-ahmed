@@ -26,7 +26,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <Flex alignItems="center" h="100vh" pos="relative">
+        <Flex alignItems="center" h="100vh" pos="relative" style={{ scrollSnapAlign: 'start' }}>
             <Box>
                 <Heading color="secondary" fontWeight="normal" fontSize="12px" letterSpacing="3px" mb="30px">SKILLS</Heading>
                 {skills.map((skill, index) => (

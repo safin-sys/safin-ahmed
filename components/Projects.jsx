@@ -30,20 +30,20 @@ const images = [
 
 export default function Projects() {
     return (
-        <>
+        <Box py="10rem">
             <Heading color="secondary" fontWeight="normal" fontSize="12px" letterSpacing="3px" mb="30px">PROJECTS</Heading>
             <Grid templateColumns={["1fr", "1fr 1fr"]} gap="1rem">
                 {images.map((image, index) => (
                     <HoverOnImage key={index} {...image} />
                 ))}
             </Grid>
-        </>
+        </Box>
     )
 }
 
 const HoverOnImage = ({ src, alt }) => {
     return (
-        <Box>
+        <Box style={{ scrollSnapAlign: 'center' }}>
             <Image
                 src={src}
                 alt={alt}
