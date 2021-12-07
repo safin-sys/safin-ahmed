@@ -31,7 +31,7 @@ const HoverOnImage = ({ name, homepage, html_url, default_branch }) => {
                 <Box>
                     <Link href={html_url} target="_blank" rel="noopener noreferrer">github</Link>
                     <span>/</span>
-                    <Link href={homepage} target="_blank" rel="noopener noreferrer">live demo</Link>
+                    <Link href={homepage} target="_blank" rel="noopener noreferrer">live site</Link>
                 </Box>
             </Flex>
         </Box>
