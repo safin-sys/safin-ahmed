@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import '../styles/globals.css'
 import { extendTheme } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import Script from 'next/script'
 
 const theme = extendTheme({
 	fonts: {
@@ -12,6 +14,7 @@ const theme = extendTheme({
 })
 
 function MyApp({ Component, pageProps }) {
+	const url = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
 	return (
 		<>
 			<Head>
@@ -31,6 +34,10 @@ function MyApp({ Component, pageProps }) {
 				<meta property="twitter:description" content="Hi, I am a self-taught front-end developer and this is my portfolio." />
 				<meta name="google-site-verification" content="uR73wVtmcchCUfsHMV8S2bJc2qHxSQAiC5p1wXTd1Fw" />
 			</Head>
+			<Script 
+				src={url}
+				strategy="beforeInteractive"
+			/>
 			<ChakraProvider theme={theme}>
 				<Component {...pageProps} />
 			</ChakraProvider>

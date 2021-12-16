@@ -17,7 +17,10 @@ export default function Hero() {
                 xOffset: 0.20,
             }))
         }
-    }, [])
+        return () => {
+            if (vantaEffect) vantaEffect.destroy()
+        }
+    }, [vantaEffect])
     return (
         <Box h="500px" as="header" ref={heroBg}>
             <Container maxW="container.md" h="100%">
