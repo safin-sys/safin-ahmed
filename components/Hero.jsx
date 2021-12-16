@@ -1,16 +1,38 @@
-import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Heading, Link } from "@chakra-ui/layout";
+import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { useEffect, useRef, useState } from "react";
+import HALO from "vanta/dist/vanta.halo.min";
 
 export default function Hero() {
+    const [vantaEffect, setVantaEffect] = useState(0)
+    const heroBg = useRef(null);
+    useEffect(() => {
+        if (!vantaEffect) {
+            setVantaEffect(HALO({
+                el: heroBg.current,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                xOffset: 0.20,
+            }))
+        }
+    })
     return (
-        <Box as="header" mt={["40px", "40px", "120px"]} h="calc(100vh - 120px)" style={{ scrollSnapAlign: 'end' }}>
-            <Heading bgColor="primary" color="white" display="inline" fontWeight="normal" fontSize="24px" px="1rem">
-                Safin Ahmed
-            </Heading>
-            <Heading fontWeight="normal" maxW="40ch" lineHeight="60px" mt="120px" mb="1rem" fontSize={[28, 28, 36]}>
-                I&apos;m a self-taught front-end developer based in Dhaka, Bangladesh.
-            </Heading>
-            <Link href="#contact_form">Let&apos;s talk <ArrowForwardIcon /></Link>
+        <Box h="500px" as="header" ref={heroBg}>
+            <Container maxW="container.md" h="100%">
+                <Flex zIndex="1" color="white" flexDir="column" justifyContent="center" h="100%">
+                    <Heading fontSize="1rem">
+                        Hi! I&apos;m
+                    </Heading>
+                    <Heading fontSize="3rem">
+                        Safin Ahmed
+                    </Heading>
+                    <Text mt="1rem">
+                        I&apos;m a self-taught full-stack developer from <br /> Dhaka, Bangladesh.
+                    </Text>
+                </Flex>
+            </Container>
         </Box>
     )
 }

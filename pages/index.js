@@ -1,8 +1,4 @@
-import { Container } from '@chakra-ui/layout'
-import Contact from '../components/Contact'
-import Hero from '../components/Hero'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
+import Hero from '../components/Hero';
 
 const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood']
 
@@ -27,11 +23,8 @@ export const getStaticProps = async () => {
 
 export default function Home({ projects }) {
 	return (
-		<Container maxW="container.lg" style={{ scrollSnapType: 'y mandatory' }}>
+		<>
 			<Hero />
-			<Skills />
-			<Projects projects={projects} />
-			<Contact />
-		</Container>
+		</>		
 	)
 }
