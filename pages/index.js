@@ -1,4 +1,6 @@
 import Hero from '../components/Hero';
+import Projetcs from '../components/Projetcs';
+import Contact from '../components/Contact';
 
 const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood']
 
@@ -25,6 +27,8 @@ export default function Home({ projects }) {
 	return (
 		<>
 			<Hero />
+			<Projetcs projects={projects} />
+			<Contact />
 		</>		
 	)
 }

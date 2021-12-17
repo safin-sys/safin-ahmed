@@ -5,6 +5,20 @@ body {
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
   font-size: 14px;
+  /* Firefox */
+  scrollbar-color: #151A41 aliceblue;
+  scrollbar-width: thin;
+}
+
+/* Chrome */
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #151A41;
 }
 
 a {
@@ -14,4 +28,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.chakra-alert {
+  border-inline-start-color: #151A41 !important;
+  background: #fff !important;
+  color: #151A41 !important;
+}
+
+.chakra-alert__icon {
+  color: #151A41 !important;
 }
