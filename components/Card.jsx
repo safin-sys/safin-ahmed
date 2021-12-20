@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Heading, Image, Link, Text } from "@chakra-ui/react";
 import slugToName from '../helper/slugToName';
 
-export const Card = ({ name, homepage, default_branch, description }) => {
+export const Card = ({ name, homepage, default_branch, description, html_url }) => {
     return (
         <Box as="article">
             <AspectRatio ratio={1.85 / 1} mb="1.5rem">
@@ -19,9 +19,16 @@ export const Card = ({ name, homepage, default_branch, description }) => {
                 {description}
             </Text>
             <Box>
-                <Button mr="1rem" bgColor="#151A41" color="white" borderRadius="0">See More</Button>
+                <Link href={html_url} _hover={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+                    <Button mr="1rem" bgColor="#151A41" color="white" borderRadius="0" _hover={{
+                        backgroundColor: '#d4e3ff',
+                        color: '#151A41'
+                    }}>
+                        Github
+                    </Button>
+                </Link>
                 <Link href={homepage} _hover={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
-                    <Button bgColor="transparent" border="1px #151A41 solid" borderRadius="0">
+                    <Button bgColor="transparent" border="1px solid #151A41" borderRadius="0">
                         Live Demo
                     </Button>
                 </Link>
