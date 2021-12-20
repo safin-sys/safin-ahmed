@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <Container maxW="container.md" mt="8rem">
             <Heading fontSize="1.5rem">Contact Me</Heading>
-            <Grid justifyContent="center" templateColumns={["1fr", "1fr 1fr"]} my="2rem">
+            <Grid justifyContent="center" templateColumns={["1fr", "1fr", "1fr 1fr"]} my="2rem">
                 <ContactForm />
                 <Footer />
             </Grid>

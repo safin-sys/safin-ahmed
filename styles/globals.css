@@ -39,3 +39,12 @@ a {
 .chakra-alert__icon {
   color: #151A41 !important;
 }
+
+.chakra-tabs__tab[aria-selected="true"] {
+  color: white !important;
+  background: #151A41 !important;
+}
+
+.chakra-tabs__tab:focus, .chakra-tabs__tab[data-focus] {
+  box-shadow: none !important;
+}

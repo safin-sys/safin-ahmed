@@ -16,7 +16,7 @@ export const Footer = () => {
         });
     };
     return (
-        <Box fontSize="14px" letterSpacing="2px" my="auto">
+        <Box my="auto" mb={["initial", "initial", "16rem"]}>
             <Flex flexWrap="wrap" justifyContent="center">
                 <Link href="mailto:safinahmed248@gmail.com">safinahmed248@gmail.com</Link>
                 <Text ml="1rem" whiteSpace="nowrap" onClick={handleCopy} cursor="pointer" userSelect="none">

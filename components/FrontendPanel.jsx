@@ -1,34 +1,51 @@
-import { Box, Container, Flex, Grid, Tooltip } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { SiBootstrap, SiChakraui, SiCss3, SiGatsby, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiSass, SiSvelte, SiTypescript, SiVuedotjs } from "react-icons/si";
+import { TooltipContainer } from "./TooltipContainer";
 
 export const FrontendPanel = () => {
     return (
-        <Flex fontSize="3rem" gap="2rem 1rem" flexWrap="wrap" justifyContent="center">
+        <Flex fontSize="3rem" gap="2rem 1rem" flexWrap="wrap" justifyContent="center" mt="1rem">
             {/* trinity */}
-            <TooltipContainer children={<SiHtml5 />} label="HTML5" />
-            <TooltipContainer children={<SiCss3 />} label="CSS3" />
-            <TooltipContainer children={<SiJavascript />} label="JavaScript" />
-            <TooltipContainer children={<SiTypescript />} label="TypeScript" />
+            <TooltipContainer label="HTML5">
+                <SiHtml5 />
+            </TooltipContainer>
+            <TooltipContainer label="CSS3">
+                <SiCss3 />
+            </TooltipContainer>
+            <TooltipContainer label="JavaScript">
+                <SiJavascript />
+            </TooltipContainer>
+            <TooltipContainer label="TypeScript">
+                <SiTypescript />
+            </TooltipContainer>
+
             {/* frameworks */}
-            <TooltipContainer children={<SiReact />} label="React" />
-            <TooltipContainer children={<SiNextdotjs />} label="NextJS" />
-            <TooltipContainer children={<SiGatsby />} label="Gatsby" />
-            <TooltipContainer children={<SiSvelte />} label="Svelte" />
+            <TooltipContainer label="React">
+                <SiReact />
+            </TooltipContainer>
+            <TooltipContainer label="NextJS">
+                <SiNextdotjs />
+            </TooltipContainer>
+            <TooltipContainer label="Gatsby">
+                <SiGatsby />
+            </TooltipContainer>
+            <TooltipContainer label="Svelte">
+                <SiSvelte />
+            </TooltipContainer>
+
             {/* css */}
-            <TooltipContainer children={<SiSass />} label="Sass" />
-            <TooltipContainer children={<SiBootstrap />} label="Bootstrap" />
-            <TooltipContainer children={<SiChakraui />} label="ChakraUI" />
-            <TooltipContainer children={<SiVuedotjs />} label="Vue" />
+            <TooltipContainer label="Sass">
+                <SiSass />
+            </TooltipContainer>
+            <TooltipContainer label="Bootstrap">
+                <SiBootstrap />
+            </TooltipContainer>
+            <TooltipContainer label="ChakraUI">
+                <SiChakraui />
+            </TooltipContainer>
+            <TooltipContainer label="Vue">
+                <SiVuedotjs />
+            </TooltipContainer>
         </Flex>
     );
 };
-
-const TooltipContainer = ({ children, label }) => {
-    return (
-        <Tooltip label={label}>
-            <Container centerContent flex="0 0 calc(24% - 3rem)">
-                {children}
-            </Container>
-        </Tooltip>
-    );
-}
