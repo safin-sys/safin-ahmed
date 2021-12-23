@@ -1,22 +1,22 @@
-import { Flex } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { SiGit, SiGithub, SiNetlify, SiVercel } from "react-icons/si";
-import { TooltipContainer } from "./TooltipContainer";
+import { StackContainer } from "./StackContainer";
 
 export const OthersPanel = () => {
     return (
-        <Flex fontSize="3rem" gap="2rem 1rem" flexWrap="wrap" justifyContent="center" mt="1rem">
-            <TooltipContainer label="Git">
+        <Grid templateColumns={["repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="3rem" gap="1.5rem 1rem" mt="1rem">
+            <StackContainer label="Git">
                 <SiGit />
-            </TooltipContainer>
-            <TooltipContainer label="Github">
+            </StackContainer>
+            <StackContainer label="Github">
                 <SiGithub />
-            </TooltipContainer>
-            <TooltipContainer label="Netlify">
+            </StackContainer>
+            <StackContainer label="Netlify">
                 <SiNetlify />
-            </TooltipContainer>
-            <TooltipContainer label="Vercel">
+            </StackContainer>
+            <StackContainer label="Vercel">
                 <SiVercel />
-            </TooltipContainer>
-        </Flex>
+            </StackContainer>
+        </Grid>
     );
 };

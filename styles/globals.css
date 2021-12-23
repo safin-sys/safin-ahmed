@@ -43,6 +43,7 @@ a {
 .chakra-tabs__tab[aria-selected="true"] {
   color: white !important;
   background: #151A41 !important;
+  border-bottom: 1px solid #151A41 !important;
 }
 
 .chakra-tabs__tab:focus, .chakra-tabs__tab[data-focus] {

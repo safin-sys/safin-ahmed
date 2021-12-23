@@ -1,51 +1,51 @@
-import { Flex } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { SiBootstrap, SiChakraui, SiCss3, SiGatsby, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiSass, SiSvelte, SiTypescript, SiVuedotjs } from "react-icons/si";
-import { TooltipContainer } from "./TooltipContainer";
+import { StackContainer } from "./StackContainer";
 
 export const FrontendPanel = () => {
     return (
-        <Flex fontSize="3rem" gap="2rem 1rem" flexWrap="wrap" justifyContent="center" mt="1rem">
+        <Grid templateColumns={["repeat(3, 1fr)", "repeat(4, 1fr)"]} fontSize="3rem" gap="1.5rem 1rem" mt="1rem">
             {/* trinity */}
-            <TooltipContainer label="HTML5">
+            <StackContainer label="HTML5">
                 <SiHtml5 />
-            </TooltipContainer>
-            <TooltipContainer label="CSS3">
+            </StackContainer>
+            <StackContainer label="CSS3">
                 <SiCss3 />
-            </TooltipContainer>
-            <TooltipContainer label="JavaScript">
+            </StackContainer>
+            <StackContainer label="JavaScript">
                 <SiJavascript />
-            </TooltipContainer>
-            <TooltipContainer label="TypeScript">
+            </StackContainer>
+            <StackContainer label="TypeScript">
                 <SiTypescript />
-            </TooltipContainer>
+            </StackContainer>
 
             {/* frameworks */}
-            <TooltipContainer label="React">
+            <StackContainer label="React">
                 <SiReact />
-            </TooltipContainer>
-            <TooltipContainer label="NextJS">
+            </StackContainer>
+            <StackContainer label="NextJS">
                 <SiNextdotjs />
-            </TooltipContainer>
-            <TooltipContainer label="Gatsby">
+            </StackContainer>
+            <StackContainer label="Gatsby">
                 <SiGatsby />
-            </TooltipContainer>
-            <TooltipContainer label="Svelte">
+            </StackContainer>
+            <StackContainer label="Svelte">
                 <SiSvelte />
-            </TooltipContainer>
+            </StackContainer>
 
             {/* css */}
-            <TooltipContainer label="Sass">
+            <StackContainer label="Sass">
                 <SiSass />
-            </TooltipContainer>
-            <TooltipContainer label="Bootstrap">
+            </StackContainer>
+            <StackContainer label="Bootstrap">
                 <SiBootstrap />
-            </TooltipContainer>
-            <TooltipContainer label="ChakraUI">
+            </StackContainer>
+            <StackContainer label="ChakraUI">
                 <SiChakraui />
-            </TooltipContainer>
-            <TooltipContainer label="Vue">
+            </StackContainer>
+            <StackContainer label="Vue">
                 <SiVuedotjs />
-            </TooltipContainer>
-        </Flex>
+            </StackContainer>
+        </Grid>
     );
 };

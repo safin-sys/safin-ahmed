@@ -22,7 +22,7 @@ export default function Hero() {
         }
     }, [vantaEffect])
     return (
-        <Box h="80vh" as="header" ref={heroBg}>
+        <Box h="600px" as="header" ref={heroBg}>
             <Container maxW="container.md" h="100%">
                 <Flex zIndex="1" color="white" flexDir="column" justifyContent="center" h="100%">
                     <Heading fontSize="1rem">

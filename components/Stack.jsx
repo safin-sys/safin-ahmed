@@ -7,7 +7,7 @@ export default function Stack() {
     return (
         <Container maxW="container.md" my="2rem">
             <Heading fontSize="1.5rem">My Stack</Heading>
-            <Tabs isFitted variant="soft-rounded" colorScheme="blackAlpha" mt="2rem">
+            <Tabs isFitted colorScheme="blackAlpha" mt="2rem">
                 <TabList>
                     <Tab height="2.5rem" borderRadius="0" fontWeight="bold">Frontend</Tab>
                     <Tab height="2.5rem" borderRadius="0" fontWeight="bold">Backend</Tab>
@@ -15,13 +15,13 @@ export default function Stack() {
                 </TabList>
 
                 <TabPanels>
-                    <TabPanel h={["300px", "250px"]}>
+                    <TabPanel h={["360px", "280px"]}>
                         <FrontendPanel />
                     </TabPanel>
-                    <TabPanel h={["300px", "250px"]}>
+                    <TabPanel h={["360px", "280px"]}>
                         <BackendPanel />
                     </TabPanel>
-                    <TabPanel h={["300px", "250px"]}>
+                    <TabPanel h={["360px", "280px"]}>
                         <OthersPanel />
                     </TabPanel>
                 </TabPanels>
