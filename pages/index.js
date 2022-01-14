@@ -3,7 +3,7 @@ import Projetcs from '../components/Projetcs';
 import Contact from '../components/Contact';
 import Stack from '../components/Stack';
 
-const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood']
+const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood-vue']
 
 function swapElement(array, indexA, indexB) {
 	const tmp = array[indexA];
