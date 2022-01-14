@@ -3,20 +3,14 @@ import Projetcs from '../components/Projetcs';
 import Contact from '../components/Contact';
 import Stack from '../components/Stack';
 
-const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood-vue']
-
-function swapElement(array, indexA, indexB) {
-	const tmp = array[indexA];
-	array[indexA] = array[indexB];
-	array[indexB] = tmp;
-}
+const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood']
 
 export const getStaticProps = async () => {
 	const req = await fetch('https://api.github.com/users/safin-sys/repos')
 	const res = await req.json()
-	const projects = res.filter(({ name }) => featuredProjects.includes(name))
-	swapElement(projects, 2, 0)
-	swapElement(projects, 5, 4)
+	const projects = res
+		.filter(project => featuredProjects.includes(project.name))
+		.sort((a, b) => featuredProjects.indexOf(a.name) - featuredProjects.indexOf(b.name))
 	return {
 		props: {
 			projects
@@ -31,6 +25,6 @@ export default function Home({ projects }) {
 			<Stack />
 			<Projetcs projects={projects} />
 			<Contact />
-		</>		
+		</>
 	)
 }
