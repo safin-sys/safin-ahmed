@@ -3,7 +3,7 @@ import Projetcs from '../components/Projetcs';
 import Contact from '../components/Contact';
 import Stack from '../components/Stack';
 
-const featuredProjects = ['hear-the-unheard', 'cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato', 'seafood']
+const featuredProjects = ['cool-movie-app', 'awwa', 'rudra-nil-utsa', 'zapomnit-nato']
 
 export const getStaticProps = async () => {
 	const req = await fetch('https://api.github.com/users/safin-sys/repos')
