@@ -1,10 +1,11 @@
 import Divider from "@/components/divider";
+import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 
 export default function Home() {
     return (
         <main className="w-full">
-			<div className="mb-16"></div>
+            <Nav />
             <Divider />
             <Hero />
             <Divider />

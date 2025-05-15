@@ -4,10 +4,19 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const futura = localFont({
-    src: "../fonts/futura-md-bt.ttf",
-    weight: "400",
-    style: "normal",
     variable: "--font-heading",
+    src: [
+        {
+            path: "../fonts/futura-light-bt.ttf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../fonts/futura-md-bt.ttf",
+            weight: "500",
+            style: "normal",
+        },
+    ],
 });
 
 const inter = Inter({

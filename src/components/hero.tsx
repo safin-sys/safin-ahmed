@@ -11,10 +11,10 @@ const Hero = () => {
             <Divider orientation="vertical" />
             <div className="mt-auto w-full">
                 <span className="pl-2 py-2 text-[10px]">
-                    text-3xl text-zinc-50 font-normal
+                    text-3xl text-zinc-50 font-medium
                 </span>
                 <Divider />
-                <h1 className="pl-2 py-1 text-3xl text-zinc-50 font-heading">
+                <h1 className="pl-2 py-1 text-3xl text-zinc-50 font-heading font-medium">
                     Safin Ahmed
                 </h1>
                 <Divider />
