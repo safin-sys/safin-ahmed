@@ -5,7 +5,7 @@ import Swoosh from "./icons/swoosh";
 
 const Nav = () => {
     const links = ["Home", "Experience", "Projects", "Blog"];
-    const [activeLink, setActiveLink] = useState("Home");
+    const [activeLink] = useState("Home");
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
     return (
         <nav className="container flex items-center h-16 font-heading font-normal justify-between px-2">
