@@ -5,10 +5,14 @@ import Hero from "@/components/hero";
 export default function Home() {
     return (
         <main className="w-full">
-            <Nav />
+            <div className="mx-4">
+                <Nav />
+            </div>
             <Divider />
-            <Hero />
-            <Divider />
+            <div className="mx-4">
+                <Hero />
+            </div>
+            <Divider pattern />
         </main>
     );
 }

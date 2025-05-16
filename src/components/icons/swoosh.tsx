@@ -1,17 +1,5 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-
 const Swoosh = ({ animate }: { animate: boolean }) => {
-    const pathRef = useRef<SVGPathElement>(null);
-    const [pathLength, setPathLength] = useState(0);
-
-    useEffect(() => {
-        if (pathRef.current) {
-            const length = pathRef.current.getTotalLength();
-            setPathLength(length);
-        }
-    }, []);
+    const pathLength = 54.772342681884766;
     return (
         <svg
             width="49"
@@ -22,7 +10,6 @@ const Swoosh = ({ animate }: { animate: boolean }) => {
             className="absolute bottom-0"
         >
             <path
-                ref={pathRef}
                 fill="none"
                 stroke="#E8E8E8"
                 strokeWidth="0.8"
