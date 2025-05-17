@@ -8,7 +8,9 @@ const Divider = ({
   if (pattern)
     return (
       <div className="flex h-8 w-full bg-[repeating-linear-gradient(315deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] border-y border-border">
-        <div className="container" />
+        <div className="mx-4 w-full">
+          <div className="container w-full h-8" />
+        </div>
       </div>
     );
   return (
