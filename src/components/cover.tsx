@@ -17,7 +17,7 @@ const Cover = () => {
       const container = document.querySelector(".container") as HTMLElement;
       if (container) {
         const width = container.offsetWidth;
-        const newCols = Math.max(5, Math.floor(width / dotSpacing));
+        const newCols = Math.max(5, Math.floor((width / dotSpacing) * 1.8));
         setDynamicCols(newCols);
       }
     };
@@ -65,7 +65,7 @@ const Cover = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [dynamicCols]);
   useEffect(() => {}, []);
   return (
     <div className="container">
