@@ -4,7 +4,7 @@ import LinkedIn from "./icons/linkedin";
 
 const ExternalLinks = () => {
     return (
-        <section className="container flex">
+        <section className="container flex flex-col md:flex-row">
             <article className="flex p-4 gap-4 items-center w-full">
                 <GitHub />
                 <div>
@@ -19,7 +19,7 @@ const ExternalLinks = () => {
                     <ExternalLink />
                 </a>
             </article>
-            <div className="min-w-6 w-6 border-x border-border" />
+            <div className="md:min-w-6 md:w-6 md:h-20 h-6 md:border-x md:border-y-0 border-y border-border" />
             <article className="flex p-4 gap-4 items-center w-full">
                 <LinkedIn />
                 <div>

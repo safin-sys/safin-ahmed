@@ -9,17 +9,29 @@ import Stack from "@/components/stack";
 export default function Home() {
     return (
         <main className="w-full">
-            <Nav />
+            <div className="mx-4">
+                <Nav />
+            </div>
             <Divider />
-            <Cover />
+            <div className="mx-4">
+                <Cover />
+            </div>
             <Divider />
-            <Hero />
+            <div className="mx-4">
+                <Hero />
+            </div>
             <Divider pattern />
-            <Info />
+            <div className="mx-4">
+                <Info />
+            </div>
             <Divider pattern />
-            <ExternalLinks />
+            <div className="mx-4">
+                <ExternalLinks />
+            </div>
             <Divider pattern />
-            <Stack />
+            <div className="mx-4">
+                <Stack />
+            </div>
             <Divider pattern />
         </main>
     );
