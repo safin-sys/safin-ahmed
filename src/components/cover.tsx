@@ -146,7 +146,7 @@ const Ripple = () => {
 
 const Cover = () => {
   const animations = ["ripple", "dottedWaves"];
-  const [activeAnimation, setActiveAnimation] = useState("ripple");
+  const [activeAnimation, setActiveAnimation] = useState("dottedWaves");
 
   const handleToggleAnimations = () => {
     const nextAnimation = animations.findIndex(

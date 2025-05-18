@@ -4,29 +4,22 @@ import Hero from "@/components/hero";
 import Info from "@/components/info";
 import Cover from "@/components/cover";
 import ExternalLinks from "@/components/external-links";
+import Stack from "@/components/stack";
 
 export default function Home() {
     return (
         <main className="w-full">
-            <div className="mx-4">
-                <Nav />
-            </div>
+            <Nav />
             <Divider />
-            <div className="mx-4">
-                <Cover />
-            </div>
+            <Cover />
             <Divider />
-            <div className="mx-4">
-                <Hero />
-            </div>
+            <Hero />
             <Divider pattern />
-            <div className="mx-4">
-                <Info />
-            </div>
+            <Info />
             <Divider pattern />
-            <div className="mx-4">
-                <ExternalLinks />
-            </div>
+            <ExternalLinks />
+            <Divider pattern />
+            <Stack />
             <Divider pattern />
         </main>
     );
