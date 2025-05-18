@@ -77,8 +77,8 @@ const DottedWaves = () => {
 const Ripple = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dynamicCols, setDynamicCols] = useState(50);
-  const [dynamicRows, setDynamicRows] = useState(30);
-
+  
+  const rows = 30;
   const dotSpacing = 14;
   const dotRadius = 2;
   const waveAmplitude = 32;
@@ -105,16 +105,16 @@ const Ripple = () => {
     if (!ctx) return;
 
     canvas.width = dynamicCols * dotSpacing;
-    canvas.height = dynamicRows * dotSpacing;
+    canvas.height = rows * dotSpacing;
 
     const centerCol = dynamicCols / 2;
-    const centerRow = dynamicRows / 2;
+    const centerRow = rows / 2;
 
     let animationFrameId: number;
 
     const draw = (time: number) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let row = 0; row < dynamicRows; row++) {
+      for (let row = 0; row < rows; row++) {
         for (let col = 0; col < dynamicCols; col++) {
           const x = col * dotSpacing + dotSpacing / 2;
           const baseY = row * dotSpacing + dotSpacing / 2;
