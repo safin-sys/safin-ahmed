@@ -3,7 +3,7 @@
 :root {
     --background: #09090b;
     --foreground: #e8e8e8;
-    --border: #27272a;
+    --border: rgba(39, 39, 42, .45);
 }
 
 @theme inline {
