@@ -77,7 +77,7 @@ const DottedWaves = () => {
 const Ripple = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dynamicCols, setDynamicCols] = useState(50);
-  
+
   const rows = 30;
   const dotSpacing = 14;
   const dotRadius = 2;
@@ -144,8 +144,21 @@ const Ripple = () => {
   );
 };
 
+const Globe = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  return (
+    <div className="container">
+      <canvas ref={canvasRef} className="w-full h-24"></canvas>
+    </div>
+  );
+};
+
 const Cover = () => {
-  const animations = ["ripple", "dottedWaves"];
+  const animations = [
+    "ripple",
+    "dottedWaves",
+    // "globe"
+  ];
   const [activeAnimation, setActiveAnimation] = useState("dottedWaves");
 
   const handleToggleAnimations = () => {
@@ -165,8 +178,9 @@ const Cover = () => {
     <div className="w-full cursor-pointer" onClick={handleToggleAnimations}>
       {activeAnimation === "dottedWaves" && <DottedWaves />}
       {activeAnimation === "ripple" && <Ripple />}
+      {activeAnimation === "globe" && <Globe />}
       <div className="container relative">
-        <span className="absolute bottom-0 right-0 text-[8px] font-heading">
+        <span className="bg-background absolute bottom-0 right-0 text-[8px] font-heading">
           {activeAnimation}
         </span>
       </div>
