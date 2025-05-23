@@ -8,36 +8,37 @@ import Stack from "@/components/stack";
 import Projects from "@/components/projects";
 
 export default function Home() {
-  return (
-    <main className="w-full">
-      <div className="mx-4">
-        <Nav />
-      </div>
-      <Divider />
-      <div className="mx-4">
-        <Cover />
-      </div>
-      <Divider />
-      <div className="mx-4">
-        <Hero />
-      </div>
-      <Divider pattern />
-      <div className="mx-4">
-        <Info />
-      </div>
-      <Divider pattern />
-      <div className="mx-4">
-        <ExternalLinks />
-      </div>
-      <Divider pattern />
-      <div className="mx-4">
-        <Stack />
-      </div>
-      <Divider pattern />
-      <div className="mx-4">
-        <Projects />
-      </div>
-      <footer className="h-64"></footer>
-    </main>
-  );
+    return (
+        <main className="w-full">
+            <div className="mx-4">
+                <Nav />
+            </div>
+            <Divider />
+            <div className="mx-4">
+                <Cover />
+            </div>
+            <Divider />
+            <div className="mx-4">
+                <Hero />
+            </div>
+            <Divider pattern />
+            <div className="mx-4">
+                <Info />
+            </div>
+            <Divider pattern />
+            <div className="mx-4">
+                <ExternalLinks />
+            </div>
+            <Divider pattern />
+            <div className="mx-4">
+                <Stack />
+            </div>
+            <Divider pattern />
+            <div className="mx-4">
+                <Projects />
+            </div>
+            <Divider />
+            <footer className="h-64"></footer>
+        </main>
+    );
 }
