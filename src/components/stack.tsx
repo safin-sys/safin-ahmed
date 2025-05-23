@@ -23,19 +23,17 @@ const Stack = () => {
     return (
         <section className="container py-2">
             <div className="flex flex-col">
-                {[0, 1, 2].map((row) => (
+                <div className="overflow-x-hidden whitespace-nowrap w-full relative flex group">
                     <div
-                        key={row}
-                        className="overflow-x-hidden whitespace-nowrap w-full relative flex group"
+                        className={`inline-block animate-marquee group-hover:paused text-xl font-bold`}
+                        style={{
+                            animation: `marquee 30s linear infinite`,
+                            animationPlayState: "running",
+                        }}
                     >
-                        <div
-                            className={`inline-block animate-marquee group-hover:paused`}
-                            style={{
-                                animation: `marquee ${20 + row * 5}s linear infinite`,
-                                animationPlayState: "running",
-                            }}
-                        >
-                            {stack.sort(() => Math.random() - 0.5).map((tech, i) => (
+                        {stack
+                            .sort(() => Math.random() - 0.5)
+                            .map((tech, i) => (
                                 <span
                                     key={i}
                                     className="mx-2 text-zinc-500 font-semibold"
@@ -43,7 +41,9 @@ const Stack = () => {
                                     {tech}
                                 </span>
                             ))}
-                            {stack.sort(() => Math.random() - 0.5).map((tech, i) => (
+                        {stack
+                            .sort(() => Math.random() - 0.5)
+                            .map((tech, i) => (
                                 <span
                                     key={`dup-${i}`}
                                     className="mx-2 text-zinc-500 font-semibold"
@@ -51,8 +51,8 @@ const Stack = () => {
                                     {tech}
                                 </span>
                             ))}
-                        </div>
-                        <style>{`
+                    </div>
+                    <style>{`
                             .group:hover > .animate-marquee {
                                 animation-play-state: paused !important;
                             }
@@ -61,8 +61,7 @@ const Stack = () => {
                                 100% { transform: translateX(-50%); }
                             }
                         `}</style>
-                    </div>
-                ))}
+                </div>
             </div>
         </section>
     );
