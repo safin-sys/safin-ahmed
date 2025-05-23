@@ -1,6 +1,7 @@
 import github_slug_to_name from "@/utils/github_slug_to_name";
 import { ProjectProps } from ".";
 import ExternalLink from "../icons/external-link";
+import Image from "next/image";
 
 const Project = ({
     name,
@@ -11,11 +12,14 @@ const Project = ({
     return (
         <article className="w-full">
             <div className="p-1 border-b border-border">
-                <img
-                    className="w-full aspect-video object-cover rounded"
-                    src={`https://raw.githubusercontent.com/safin-sys/${name}/${default_branch}/logo.png`}
-                    alt={name}
-                />
+                <div className="relative aspect-video">
+                    <Image
+                        className="object-cover rounded"
+                        src={`https://raw.githubusercontent.com/safin-sys/${name}/${default_branch}/logo.png`}
+                        alt={name}
+                        fill
+                    />
+                </div>
             </div>
             <footer className="flex">
                 <div className="w-full">

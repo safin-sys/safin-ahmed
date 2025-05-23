@@ -1,12 +1,15 @@
+import Image from "next/image";
 import Divider from "./divider";
 
 const Hero = () => {
     return (
         <section className="container flex h-36">
-            <img
+            <Image
                 src="https://avatars.githubusercontent.com/u/61120114?v=4"
                 alt="pfp"
                 className="w-36 h-full rounded-full border border-border p-0.5"
+                width={144}
+                height={144}
             />
             <Divider orientation="vertical" />
             <div className="mt-auto w-full">

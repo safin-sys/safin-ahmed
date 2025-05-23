@@ -7,7 +7,7 @@ import ExternalLinks from "@/components/external-links";
 import Stack from "@/components/stack";
 import Projects from "@/components/projects";
 import Footer from "@/components/footer";
-import Experience from "@/components/experience";
+// import Experience from "@/components/experience";
 
 export default function Home() {
     return (
