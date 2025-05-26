@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import get_work_duration from "@/lib/get_work_duration";
+import { Code2 } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -141,7 +142,29 @@ const Experience = () => {
                   </p>
                 </div>
               </AccordionTrigger>
-              <AccordionContent></AccordionContent>
+              <AccordionContent>
+                <div className="flex border-t border-border">
+                  <div className="p-0.5 h-fit border-b border-border">
+                    <Code2 className="w-5 h-5 border rounded-[6px] p-0.5" />
+                  </div>
+                  <div className="flex h-auto w-2 bg-[repeating-linear-gradient(45deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] border-x border-border" />
+                  <div className="pt-0.5 w-full">
+                    <div className="border-b border-border w-full">
+                      <h1 className="px-2">Senior Nigga</h1>
+                    </div>
+                    <div className="px-2">
+                      <ul>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                      </ul>
+                    </div>
+                    <div className="flex gap-1 px-2">
+                      <span>ReactJS</span>
+                      <span>NextJS</span>
+                    </div>
+                  </div>
+                </div>
+              </AccordionContent>
             </AccordionItem>
           </Accordion>
         ))}
