@@ -14,9 +14,13 @@ const ExternalLinks = () => {
                 <a
                     href="https://github.com/safin-sys"
                     target="_blank"
-                    className="ml-auto"
+                    className="ml-auto relative group"
                 >
                     <ExternalLink />
+                    <span
+                        className="absolute inset-0 pointer-events-none transition-all duration-300 before:content-[''] before:absolute before:inset-0 before:border-2 before:border-blue-400 before:opacity-0 group-hover:before:opacity-100 group-hover:before:scale-105 before:scale-95 before:transition-all before:duration-300"
+                        aria-hidden="true"
+                    />
                 </a>
             </article>
             <div className="md:min-w-6 md:w-6 md:h-20 h-6 md:border-x md:border-y-0 border-y border-border" />
@@ -31,9 +35,13 @@ const ExternalLinks = () => {
                 <a
                     href="https://linkedin.com/in/safin-sys"
                     target="_blank"
-                    className="ml-auto"
+                    className="ml-auto relative group"
                 >
                     <ExternalLink />
+                    <span
+                        className="absolute inset-0 pointer-events-none transition-all duration-300 before:content-[''] before:absolute before:inset-0 before:border-2 before:border-blue-400 before:opacity-0 group-hover:before:opacity-100 group-hover:before:scale-105 before:scale-95 before:transition-all before:duration-300"
+                        aria-hidden="true"
+                    />
                 </a>
             </article>
         </section>

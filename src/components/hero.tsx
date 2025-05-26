@@ -13,7 +13,7 @@ const Hero = () => {
             />
             <Divider orientation="vertical" />
             <div className="mt-auto w-full">
-                <span className="pl-2 py-2 text-[10px]">
+                <span className="pl-2 py-2 text-[10px] text-zinc-600">
                     text-3xl text-zinc-50 font-medium
                 </span>
                 <Divider />
