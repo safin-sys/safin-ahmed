@@ -190,22 +190,21 @@ const Experience = () => {
                                             : "border-b"
                                     } border-border`}
                                 >
-                                    <div className="p-0.5 h-7 border-b border-border flex items-center justify-center">
+                                    <div className="p-0.5 h-11 border-b border-border flex items-center justify-center">
                                         <Code2 className="w-5 h-5 border rounded-[6px] p-0.5" />
                                     </div>
                                     <div className="flex h-auto w-3 bg-[repeating-linear-gradient(45deg,var(--border)_0,var(--border)_1px,transparent_0,transparent_50%)] bg-size-[6px_6px] border-x border-border relative">
-                                        <div className="absolute bg-border h-px top-7 w-full -mt-px" />
+                                        <div className="absolute bg-border h-px top-11 w-full -mt-px" />
                                     </div>
                                     <div className="w-full">
                                         {experience.positions.map(
                                             (position, index) => (
                                                 <Fragment key={index}>
-                                                    <div className="border-b border-border w-full h-7 flex items-center">
+                                                    <div className="border-b border-border h-11 w-full flex flex-col">
                                                         <h1 className="px-1.5 text-base font-medium">
                                                             {position.position}
                                                         </h1>
-                                                        <span className="w-1 h-1 rounded-full bg-zinc-300 mx-1" />
-                                                        <span className="text-sm text-zinc-400 px-1.5">
+                                                        <span className="text-xs text-zinc-400 px-1.5">
                                                             {position?.work_period
                                                                 ? position?.work_period
                                                                 : experience.work_period}
