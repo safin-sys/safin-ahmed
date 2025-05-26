@@ -140,13 +140,23 @@ const Experience = () => {
                 <h1 className="text-2xl">Experience</h1>
             </div>
             <div>
-                {experiences.map((experience, key) => (
-                    <Accordion key={key} collapsible type="single">
-                        <AccordionItem value={experience.company_name}>
+                <Accordion
+                    collapsible
+                    type="single"
+                    className="w-full"
+                    defaultValue={experiences[0].company_name}
+                >
+                    {experiences.map((experience, key) => (
+                        <AccordionItem
+                            key={key}
+                            value={experience.company_name}
+                            className="border-none"
+                        >
                             <AccordionTrigger
                                 className={`px-2 ${
-                                    experience != lastExperience && "border-b"
-                                } border-border rounded-none`}
+                                    experience != lastExperience &&
+                                    "border-b border-border"
+                                } rounded-none`}
                             >
                                 <div className="flex flex-col">
                                     <h4 className="font-semibold text-base">
@@ -194,7 +204,7 @@ const Experience = () => {
                                                         <h1 className="px-1.5 text-base font-medium">
                                                             {position.position}
                                                         </h1>
-														<span className="w-1 h-1 rounded-full bg-zinc-300 mx-1" />
+                                                        <span className="w-1 h-1 rounded-full bg-zinc-300 mx-1" />
                                                         <span className="text-sm text-zinc-400 px-1.5">
                                                             {position?.work_period
                                                                 ? position?.work_period
@@ -248,8 +258,8 @@ const Experience = () => {
                                 </div>
                             </AccordionContent>
                         </AccordionItem>
-                    </Accordion>
-                ))}
+                    ))}
+                </Accordion>
             </div>
         </section>
     );

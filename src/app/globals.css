@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 :root {
     --background: #09090b;
     --foreground: #e8e8e8;
-    --border: rgba(39, 39, 42, .45);
+    --border: rgba(39, 39, 42, .5);
 }
 
 @theme inline {
