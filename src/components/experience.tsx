@@ -121,7 +121,7 @@ const Experience = () => {
           position: "Frontend Developer",
           work_period: "Mar 2022 - Jun 2022",
           points: [
-            <p>
+            <p key="1">
               Built the landing page and admin dashboard using Next.js, Chakra
               UI, and Material UI.
             </p>,
@@ -211,15 +211,41 @@ const AccordionHeader = ({
   </div>
 );
 
+interface AccordionContentBodyProps {
+  experience: {
+    company_name: string;
+    work_period: string;
+    employment_type: string;
+    location: string;
+    work_type: string;
+    stack: string[];
+    positions: {
+      position: string;
+      work_period?: string | null;
+      points: React.ReactNode[];
+    }[];
+  };
+  lastExperience: {
+    company_name: string;
+    work_period: string;
+    employment_type: string;
+    location: string;
+    work_type: string;
+    stack: string[];
+    positions: {
+      position: string;
+      work_period?: string | null;
+      points: React.ReactNode[];
+    }[];
+  };
+}
+
 const AccordionContentBody = ({
   experience,
   lastExperience,
-}: {
-  experience: any;
-  lastExperience: any;
-}) => (
+}: AccordionContentBodyProps) => (
   <>
-    {experience.positions.map((position: any, index: number) => (
+    {experience.positions.map((position, index) => (
       <section
         key={index}
         className={`${
@@ -227,9 +253,7 @@ const AccordionContentBody = ({
         } border-border`}
       >
         <header className="flex border-b border-border">
-          <div className="p-0.5 h-11 flex items-center justify-center">
-            <Code2 className="w-5 h-5 border rounded-[6px] p-0.5" />
-          </div>
+          <BodyLogo />
           <BodyDivider />
           <div>
             <h1 className="px-1.5 text-base font-medium">
@@ -262,7 +286,7 @@ const AccordionContentBody = ({
           <div className="px-1.5 py-2">
             {position.points && (
               <ul>
-                {position.points.map((point: any, i: number) => (
+                {position.points.map((point, i) => (
                   <li key={i} className="flex gap-1 mb-2 text-zinc-300">
                     <span className="w-1 h-1 min-w-1 min-h-1 rounded-full bg-zinc-300 mt-2" />
                     {point}
@@ -281,7 +305,7 @@ const AccordionContentBody = ({
 );
 
 const BodyLogo = () => (
-  <div className="p-0.5 h-11 border-b border-border flex items-center justify-center">
+  <div className="p-0.5 h-11 flex items-center justify-center">
     <Code2 className="w-5 h-5 border rounded-[6px] p-0.5" />
   </div>
 );
