@@ -1,5 +1,9 @@
 const get_work_duration = (work_period: string) => {
-  if (work_period.includes("Present")) return null;
+  if (
+    typeof work_period !== "string" ||
+    (work_period && work_period.includes("Present"))
+  )
+    return null;
   const [start, end] = work_period.split(" - ");
   const parseDate = (str: string) => {
     const [month, year] = str.split(" ");
