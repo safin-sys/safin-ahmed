@@ -1,21 +1,22 @@
 import Divider from "@/components/divider";
-import Nav from "@/components/nav";
+// import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import Info from "@/components/info";
 import Cover from "@/components/cover";
 import ExternalLinks from "@/components/external-links";
 import Stack from "@/components/stack";
-import Projects from "@/components/projects";
+// import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import Experience from "@/components/experience";
+// import Blogs from "@/components/blogs";
 
 export default function Home() {
   return (
     <main className="w-full">
-      <div className="mx-4">
+      {/* <div className="mx-4">
         <Nav />
       </div>
-      <Divider />
+      <Divider /> */}
       <div className="mx-4">
         <Cover />
       </div>
@@ -35,10 +36,14 @@ export default function Home() {
       <div className="mx-4">
         <Experience />
       </div>
-      <Divider pattern />
+      {/* <Divider pattern />
       <div className="mx-4">
         <Projects />
       </div>
+      <Divider pattern />
+      <div className="mx-4">
+        <Blogs />
+      </div> */}
       <Divider />
       <div className="mx-4">
         <Footer />

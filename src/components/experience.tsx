@@ -10,28 +10,19 @@ import { Code2 } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      company_name: "Spark Tech Agency",
-      work_period: "Feb 2025 - Present",
-      employment_type: "Contract",
-      location: "Dhaka, Bangladesh",
-      work_type: "On-site",
-      stack: ["NextJS", "Express.js", "MongoDB", "nginx", "AWS", "Vite"],
+      company_name: "STARTH",
+      work_period: "Jun 2025 - Present",
+      employment_type: "Full-time",
+      location: "Stockholm, Sweden",
+      work_type: "Remote",
+      stack: ["NextJS", "TailwindCSS", "shadcn/ui"],
       positions: [
         {
-          position: "Senior Fullstack Developer",
+          position: "Frontend Lead",
           work_period: null,
           points: [
             <p key="1">
-              Short-term engagement during transition from career break.
-              Contributing to small to mid-sized full-stack projects.
-            </p>,
-            <p key="2">
-              Developed scalable backend services using Node.js, Express.js, and
-              MongoDB (Mongoose ORM).
-            </p>,
-            <p key="3">
-              Integrated Stripe payment systems (including Stripe Connect)
-              across multiple platforms.
+              Lead the frontend team and architected the project.
             </p>,
           ],
         },
