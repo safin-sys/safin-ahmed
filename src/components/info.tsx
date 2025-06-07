@@ -4,7 +4,7 @@ const Info = () => {
     const infos = [
         {
             icon: <Code className="w-[14px] h-[14px]" />,
-            text: "Senior Fullstack Developer @Spark Tech Agency",
+            text: "Frontend Lead @STARTH",
         },
         {
             icon: <Map className="w-[14px] h-[14px]" />,
