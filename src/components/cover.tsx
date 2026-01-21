@@ -452,21 +452,11 @@ const Ripple = () => {
     );
 };
 
-// const Globe = () => {
-//   const canvasRef = useRef<HTMLCanvasElement>(null);
-//   return (
-//     <div className="container">
-//       <canvas ref={canvasRef} className="w-full h-24"></canvas>
-//     </div>
-//   );
-// };
-
 const Cover = () => {
     const animations = [
         "dottedWaves",
-        "matrix",
         "ripple",
-        // "globe"
+        "matrix",
     ];
     const [activeAnimation, setActiveAnimation] = useState("dottedWaves");
 
@@ -488,7 +478,6 @@ const Cover = () => {
             {activeAnimation === "dottedWaves" && <DottedWaves />}
             {activeAnimation === "matrix" && <Matrix />}
             {activeAnimation === "ripple" && <Ripple />}
-            {/* {activeAnimation === "globe" && <Globe />} */}
             <div className="container relative">
                 <span className="bg-background absolute bottom-0 right-0 text-[8px] font-heading">
                     {activeAnimation}
