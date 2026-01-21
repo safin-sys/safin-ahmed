@@ -4,7 +4,7 @@ import Hero from "@/components/hero";
 import Info from "@/components/info";
 import Cover from "@/components/cover";
 import ExternalLinks from "@/components/external-links";
-import Stack from "@/components/stack";
+// import Stack from "@/components/stack";
 // import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import Experience from "@/components/experience";
@@ -45,9 +45,9 @@ export default function Home() {
         <Blogs />
       </div> */}
       <Divider />
-      <div className="mx-4">
+      <div className="mx-4 mb-4">
         <Footer />
-        <Stack />
+        {/* <Stack /> */}
       </div>
     </main>
   );

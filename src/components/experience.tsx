@@ -11,8 +11,8 @@ const Experience = () => {
   const experiences = [
     {
       company_name: "STARTH",
-      work_period: "Jun 2025 - Present",
-      employment_type: "Full-time",
+      work_period: "Jun 2025 - Aug 2025",
+      employment_type: "Contract",
       location: "Stockholm, Sweden",
       work_type: "Remote",
       stack: ["NextJS", "TailwindCSS", "shadcn/ui"],
@@ -22,7 +22,13 @@ const Experience = () => {
           work_period: null,
           points: [
             <p key="1">
-              Lead the frontend team and architected the project.
+              Managed project workflows and feature tracking via Trello, aligning team deliverables with client requirements.
+            </p>,
+            <p key="2">
+              Optimized performance and usability across multiple dashboards and portals.
+            </p>,
+            <p key="3">
+              Introduced scalable UI patterns and reusable component structures, reducing future development time.
             </p>,
           ],
         },
@@ -142,9 +148,8 @@ const Experience = () => {
               className="border-none"
             >
               <AccordionTrigger
-                className={`px-2 ${
-                  experience != lastExperience && "border-b border-border"
-                } rounded-none`}
+                className={`px-2 ${experience != lastExperience && "border-b border-border"
+                  } rounded-none`}
               >
                 <AccordionHeader
                   company_name={experience.company_name}
@@ -239,9 +244,8 @@ const AccordionContentBody = ({
     {experience.positions.map((position, index) => (
       <section
         key={index}
-        className={`${
-          experience === lastExperience ? "border-t" : "border-b"
-        } border-border`}
+        className={`${experience === lastExperience ? "border-t" : "border-b"
+          } border-border`}
       >
         <header className="flex border-b border-border">
           <BodyLogo />
@@ -259,15 +263,15 @@ const AccordionContentBody = ({
                   ? position?.work_period
                   : experience.work_period
               ) && (
-                <>
-                  <div className="w-1 h-1 rounded-full bg-zinc-400" />
-                  {get_work_duration(
-                    position?.work_period
-                      ? position?.work_period
-                      : experience.work_period
-                  )}
-                </>
-              )}
+                  <>
+                    <div className="w-1 h-1 rounded-full bg-zinc-400" />
+                    {get_work_duration(
+                      position?.work_period
+                        ? position?.work_period
+                        : experience.work_period
+                    )}
+                  </>
+                )}
             </div>
           </div>
         </header>
