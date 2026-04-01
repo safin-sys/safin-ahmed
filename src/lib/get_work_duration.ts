@@ -13,7 +13,7 @@ const get_work_duration = (work_period: string) => {
   const endDate = parseDate(end);
   let months =
     (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-    (endDate.getMonth() - startDate.getMonth());
+    (endDate.getMonth() - startDate.getMonth()) + 1;
   const years = Math.floor(months / 12);
   months = months % 12;
   const yearStr = years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "";
