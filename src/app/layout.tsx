@@ -38,7 +38,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <Script
-                src="https://pulsed.pages.dev/pulse.js"
+                src="https://pulsed.pages.dev/orbit.js"
                 data-api-key="an_76318b20cbdb8503477e134573cfd1a31a3d1335d957f5ee6de24763f48dfc1a"
             />
             <body
