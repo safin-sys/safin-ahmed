@@ -5,21 +5,17 @@ export type ProjectProps = {
     description: string;
     homepage: string;
     default_branch: string;
+    iframe?: string;
 };
 
 const Projects = async () => {
     const projects = [
         {
-            name: "awwa",
-            description: "Redesigned landing page of a non-profit",
-            homepage: "https://awwa.netlify.app/",
-            default_branch: "master",
-        },
-        {
-            name: "rudra-nil-utsa",
-            description: "Personal website of a friend",
-            homepage: "https://rudranilutsa.netlify.app/",
-            default_branch: "master",
+            name: "orbit",
+            description: "A privacy and UX focused analytics platform",
+            homepage: "https://orbit.pages.dev/",
+            default_branch: "main",
+            iframe: "https://orbit.pages.dev/preview",
         },
     ];
     return (
@@ -30,8 +26,8 @@ const Projects = async () => {
             </div>
             <div className="flex flex-col sm:flex-row">
                 <Project {...projects[0]} />
-                <div className="h-6 border-y border-border sm:w-6 sm:min-w-6 sm:border-x sm:h-auto sm:border-y-0" />
-                <Project {...projects[1]} />
+                {/* <div className="h-6 border-y border-border sm:w-6 sm:min-w-6 sm:border-x sm:h-auto sm:border-y-0" />
+                <Project {...projects[1]} /> */}
             </div>
         </section>
     );

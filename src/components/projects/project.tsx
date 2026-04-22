@@ -8,17 +8,21 @@ const Project = ({
   description,
   homepage,
   default_branch,
+  iframe
 }: ProjectProps) => {
   return (
     <article className="w-full">
       <div className="p-1 border-b border-border">
         <div className="relative aspect-video">
-          <Image
-            className="object-cover rounded"
-            src={`https://raw.githubusercontent.com/safin-sys/${name}/${default_branch}/logo.png`}
-            alt={name}
-            fill
-          />
+          {iframe && <iframe src={iframe} className="absolute w-full h-full origin-top-left" />}
+          {!iframe &&
+            <Image
+              className="object-cover rounded"
+              src={`https://raw.githubusercontent.com/safin-sys/${name}/${default_branch}/logo.png`}
+              alt={name}
+              fill
+            />
+          }
         </div>
       </div>
       <footer className="flex">

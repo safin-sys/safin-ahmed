@@ -8,6 +8,7 @@ import ExternalLinks from "@/components/external-links";
 // import Projects from "@/components/projects";
 import Footer from "@/components/footer";
 import Experience from "@/components/experience";
+import Projects from "@/components/projects";
 // import Blogs from "@/components/blogs";
 
 export default function Home() {
@@ -36,11 +37,11 @@ export default function Home() {
       <div className="mx-4">
         <Experience />
       </div>
-      {/* <Divider pattern />
+      <Divider pattern />
       <div className="mx-4">
         <Projects />
       </div>
-      <Divider pattern />
+      {/* <Divider pattern />
       <div className="mx-4">
         <Blogs />
       </div> */}
