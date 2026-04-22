@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className="container flex h-36">
             <Image
-                src="https://avatars.githubusercontent.com/u/61120114?v=4"
+                src="https://github.com/safin-sys.png"
                 alt="pfp"
                 className="w-36 h-full rounded-full border border-border p-0.5"
                 width={144}
