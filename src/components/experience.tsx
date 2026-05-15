@@ -87,7 +87,7 @@ const Experience = () => {
       work_period: "Mar 2022 - Jan 2023",
       employment_type: "Full-time",
       location: "Sarasota, FL, USA",
-      work_type: "Hybrid",
+      work_type: "Remote",
       stack: [
         "NextJS",
         "NextJS API Routes",
