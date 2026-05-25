@@ -11,14 +11,14 @@ const Experience = () => {
   const experiences = [
     {
       company_name: "STARTH",
-      work_period: "Jun 2025 - Aug 2025",
+      work_period: "Sep 2024 - Aug 2025",
       employment_type: "Contract",
       location: "Stockholm, Sweden",
       work_type: "Remote",
       stack: ["NextJS", "TailwindCSS", "shadcn/ui"],
       positions: [
         {
-          position: "Frontend Lead",
+          position: "Senior Frontend Developer",
           work_period: null,
           points: [
             <p key="1">
@@ -43,7 +43,7 @@ const Experience = () => {
       stack: ["NextJS", "ReactJS", "Redux", "MongoDB", "Firebase"],
       positions: [
         {
-          position: "Senior Web Architect",
+          position: "Full-stack Developer",
           work_period: null,
           points: [
             <p key="1">
